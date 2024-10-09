@@ -2,7 +2,7 @@
   {
     "name": "Solar Power Generation Prediction",
     "desc": "Developed a Solar Power Generation Prediction model to enhance energy production and reliability using machine learning, improving system efficiency by detecting defects and optimizing maintenance.",
-    "image": "assets/images/projects/Solar power.jpeg",
+    "image": "assets/images/projects/Solar_power.jpeg",  // Updated path, removed space and ensured consistency
     "category": "machine_learning",
     "links": {
       "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
@@ -12,7 +12,7 @@
   {
     "name": "Vial and Syringe Counting System",
     "desc": "Developed a Vial and Syringe Counting System using image processing to automate counting in production lines, enhancing accuracy and minimizing manual intervention.",
-    "image": "projects/Syringe and vial.jpeg",
+    "image": "assets/images/projects/Syringe_and_vial.jpeg",  // Ensured path consistency
     "category": "image_processing",
     "links": {
       "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
@@ -22,7 +22,7 @@
   {
     "name": "Fruit and Vegetable Detection",
     "desc": "Built a system to detect and identify fruits or vegetables from images using machine learning and image processing.",
-    "image": "assets/images/projects/Solar power.jpeg",
+    "image": "assets/images/projects/Fruit_and_veg.jpeg",  // Corrected the image path
     "category": "machine_learning",
     "links": {
       "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
