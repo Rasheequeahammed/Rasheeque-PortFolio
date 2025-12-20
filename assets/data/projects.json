@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Solar Power Generation Prediction",
+    "desc": "Developed a Solar Power Generation Prediction model to enhance energy production and reliability using machine learning, improving system efficiency by detecting defects and optimizing maintenance.",
+    "image": "Solar_power.jpeg",
+    "category": "machine_learning",
+    "links": {
+      "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
+      "code": "https://github.com/Rasheequeahammed/SolarIQ"
+    }
+  },
+  {
+    "name": "Vial and Syringe Counting System",
+    "desc": "Developed a Vial and Syringe Counting System using image processing to automate counting in production lines, enhancing accuracy and minimizing manual intervention.",
+    "image": "Syringe_and_vial.jpeg",
+    "category": "image_processing",
+    "links": {
+      "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
+      "code": "https://github.com/Rasheequeahammed/SolarIQ"
+    }
+  },
+  {
+    "name": "Fruit and Vegetable Detection",
+    "desc": "Built a system to detect and identify fruits or vegetables from images using machine learning and image processing.",
+    "image": "Fruit_and_veg.jpeg",
+    "category": "machine_learning",
+    "links": {
+      "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
+      "code": "https://github.com/Rasheequeahammed/SolarIQ"
+    }
+  }
+]
