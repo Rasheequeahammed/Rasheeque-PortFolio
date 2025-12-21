@@ -663,7 +663,7 @@ header .navbar ul li a:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  height: 30rem;
+  height: 35rem;
 }
 .work .box-container .box img {
   height: 100%;
@@ -674,42 +674,58 @@ header .navbar ul li a:hover {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 85%;
+  top: 70%;
   left: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   display: flex;
   flex-direction: column;
+  transition: top 0.3s ease;
 }
 .work .box-container .box .content .tag {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 4.5rem;
+  min-height: 4.5rem;
   width: 100%;
   padding-left: 1rem;
   background: #ffd900;
+  flex-shrink: 0;
 }
 .work .box-container .box .content .tag h3 {
   font-size: 2rem;
 }
 .work .box-container .box:hover .content {
-  top: 25%;
+  top: 0;
 }
 .work .desc {
-  margin: 2rem;
+  margin: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  flex: 1;
+  padding-bottom: 1rem;
 }
 .work .desc p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.work .desc p .read-more {
+  color: #310ae0;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 0.3rem;
+}
+.work .desc p .read-more:hover {
+  text-decoration: underline;
 }
 .work .desc .btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;
+  flex-shrink: 0;
+  padding-top: 0.5rem;
 }
 .work .desc .btns .btn {
   line-height: 0;

@@ -1,5 +1,15 @@
 [
   {
+    "name": "Retail Management System",
+    "desc": "A comprehensive retail management system built with FastAPI and React, featuring point-of-sale operations, inventory management, and multi-store support. Includes AI-powered analytics for sales forecasting, customer insights, and automated business intelligence reporting.",
+    "image": "RTS.png",
+    "category": "full_stack",
+    "links": {
+      "view": "https://drive.google.com/file/d/1EU_KB4HTpBb-MkS8ltj4wF7MnnHHvXbP/view?usp=sharing",
+      "code": "https://github.com/Rasheequeahammed/POS_System.git"
+    }
+  },
+  {
     "name": "Solar Power Generation Prediction",
     "desc": "Developed a Solar Power Generation Prediction model to enhance energy production and reliability using machine learning, improving system efficiency by detecting defects and optimizing maintenance.",
     "image": "Solar_power.jpeg",
