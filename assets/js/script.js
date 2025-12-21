@@ -112,7 +112,7 @@ function showProjects(projects) {
     }
     
     let projectHTML = "";
-    projects.slice(0, 4).filter(project => project.category != "android").forEach(project => {
+    projects.filter(project => project.category != "android").forEach(project => {
         projectHTML += `
         <div class="box tilt">
       <img draggable="false" src="./assets/images/projects/${project.image}" alt="project" />
