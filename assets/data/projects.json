@@ -1,5 +1,15 @@
 [
   {
+    "name": "SpaceZap.AI (ThinkNeural)",
+    "desc": "Engineered ML pipelines for an AI-driven spatial platform that automates retail site surveys and 3D fit-out designs. Developed computer vision models for boundary detection and automated the conversion of raw scan data into structured, CAD-ready 2D/3D layouts. Optimized generative design logic to enable rapid, brand-consistent store rollouts for major clients like Lenskart and MR.DIY.",
+    "image": "spacezapp.jpg",
+    "category": "machine_learning",
+    "links": {
+      "view": "https://thinkneural.ai/spacezap.html",
+      "code": "https://thinkneural.ai/spacezap.html"
+    }
+  },
+  {
     "name": "Retail Management System",
     "desc": "A comprehensive retail management system built with FastAPI and React, featuring point-of-sale operations, inventory management, and multi-store support. Includes AI-powered analytics for sales forecasting, customer insights, and automated business intelligence reporting.",
     "image": "RTS.png",
