@@ -89,18 +89,33 @@ async function fetchData(type = "skills") {
     return data;
 }
 
-function showSkills(skills) {
+function showSkills(skillsData) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
-    skills.forEach(skill => {
+    
+    // Loop through each category
+    for (let category in skillsData) {
         skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
+            <div class="skill-category">
+                <h3 class="category-title">${category}</h3>
+                <div class="skills-grid">`;
+        
+        // Loop through skills in this category
+        skillsData[category].forEach(skill => {
+            skillHTML += `
+                <div class="bar">
+                    <div class="info">
+                        <img src="${skill.icon}" alt="${skill.name}" />
+                        <span>${skill.name}</span>
+                    </div>
+                </div>`;
+        });
+        
+        skillHTML += `
+                </div>
+            </div>`;
+    }
+    
     skillsContainer.innerHTML = skillHTML;
 }
 

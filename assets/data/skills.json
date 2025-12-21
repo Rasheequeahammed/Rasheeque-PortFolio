@@ -1,74 +1,82 @@
-[
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "TensorFlow",
-        "icon": "https://img.icons8.com/color/48/000000/tensorflow.png"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },
-    {
-        "name": "Google Cloud Platform",
-        "icon": "https://img.icons8.com/color/48/000000/google-cloud.png"
-    },
-    {
-        "name": "Jupyter",
-        "icon": "https://img.icons8.com/fluency/48/000000/jupyter.png"
-    },
-    {
-        "name": "Scikit-Learn",
-        "icon": "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png"
-    },
-    {
-        "name": "Power BI",
-        "icon": "https://img.icons8.com/color/48/000000/power-bi.png"
-    },
-    {
-        "name": "Excel",
-        "icon": "https://img.icons8.com/color/48/000000/microsoft-excel-2019.png"
-    },
-    {
-        "name": "Tableau",
-        "icon": "https://img.icons8.com/color/48/000000/tableau-software.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
-        "name": "Pandas",
-        "icon": "https://img.icons8.com/color/48/000000/pandas.png"
-    },
-    {
-        "name": "NumPy",
-        "icon": "https://img.icons8.com/color/48/000000/numpy.png"
-    },
-    {
-        "name": "Google Analytics",
-        "icon": "https://img.icons8.com/color/48/000000/google-analytics.png"
-    },
-    {
-        "name": "R",
-        "icon": "https://img.icons8.com/color/48/000000/r.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "YOLO",
-        "icon": "https://img.icons8.com/color/48/000000/yolo.png"
-    },
-    {
-        "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    }
-]
+{
+    "Machine Learning & AI": [
+        {
+            "name": "Python",
+            "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+        },
+        {
+            "name": "TensorFlow",
+            "icon": "https://img.icons8.com/color/48/000000/tensorflow.png"
+        },
+        {
+            "name": "Scikit-Learn",
+            "icon": "https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png"
+        },
+        {
+            "name": "Pandas",
+            "icon": "https://img.icons8.com/color/48/000000/pandas.png"
+        },
+        {
+            "name": "NumPy",
+            "icon": "https://img.icons8.com/color/48/000000/numpy.png"
+        },
+        {
+            "name": "YOLO",
+            "icon": "https://img.icons8.com/color/48/000000/yolo.png"
+        },
+        {
+            "name": "Jupyter",
+            "icon": "https://img.icons8.com/fluency/48/000000/jupyter.png"
+        }
+    ],
+    "Cloud & DevOps": [
+        {
+            "name": "AWS",
+            "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
+        },
+        {
+            "name": "Google Cloud Platform",
+            "icon": "https://img.icons8.com/color/48/000000/google-cloud.png"
+        },
+        {
+            "name": "GitHub",
+            "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+        }
+    ],
+    "Data Analytics & BI": [
+        {
+            "name": "Power BI",
+            "icon": "https://img.icons8.com/color/48/000000/power-bi.png"
+        },
+        {
+            "name": "Tableau",
+            "icon": "https://img.icons8.com/color/48/000000/tableau-software.png"
+        },
+        {
+            "name": "Excel",
+            "icon": "https://img.icons8.com/color/48/000000/microsoft-excel-2019.png"
+        },
+        {
+            "name": "Google Analytics",
+            "icon": "https://img.icons8.com/color/48/000000/google-analytics.png"
+        },
+        {
+            "name": "R",
+            "icon": "https://img.icons8.com/color/48/000000/r.png"
+        }
+    ],
+    "Databases": [
+        {
+            "name": "MySQL",
+            "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+        },
+        {
+            "name": "PostgreSQL",
+            "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
+        },
+        {
+            "name": "MongoDB",
+            "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+        }
+    ]
+}

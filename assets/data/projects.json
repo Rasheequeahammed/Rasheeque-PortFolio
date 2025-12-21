@@ -1,5 +1,15 @@
 [
   {
+    "name": "Sakshi.AI (ThinkNeural)",
+    "desc": "Developed high-performance Machine Learning pipelines for a real-time intelligent video analytics and surveillance platform. Engineered vision models for automated object detection, behavioral analysis, and anomaly recognition to enhance security and operational monitoring. Implemented scalable video processing workflows that provide actionable insights from live camera feeds for retail and industrial environments.",
+    "image": "sakshi.png",
+    "category": "machine_learning",
+    "links": {
+      "view": "https://thinkneural.ai/sakshi.html",
+      "code": "https://thinkneural.ai/sakshi.html"
+    }
+  },
+  {
     "name": "SpaceZap.AI (ThinkNeural)",
     "desc": "Engineered ML pipelines for an AI-driven spatial platform that automates retail site surveys and 3D fit-out designs. Developed computer vision models for boundary detection and automated the conversion of raw scan data into structured, CAD-ready 2D/3D layouts. Optimized generative design logic to enable rapid, brand-consistent store rollouts for major clients like Lenskart and MR.DIY.",
     "image": "spacezapp.jpg",
