@@ -70,13 +70,17 @@ document.addEventListener('visibilitychange',
 
 
 // <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: ["Data Scientist", "Data Analyst", "Machine Learning Engineer", "Ai Enginner", "Business Analyst"],
-    loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
-});
+// <!-- typed js effect starts -->
+if (document.querySelector(".typing-text")) {
+    var typed = new Typed(".typing-text", {
+        strings: ["Data Scientist", "Data Analyst", "Machine Learning Engineer", "AI Engineer", "Business Analyst"],
+        loop: true,
+        typeSpeed: 50,
+        backSpeed: 25,
+        backDelay: 500,
+    });
+}
+// <!-- typed js effect ends -->
 // <!-- typed js effect ends -->
 
 // Data is now loaded from data-skills.js, data-projects.js, and data-certificates.js
@@ -96,11 +100,9 @@ function showSkills(skills) {
         // Loop through skills in this category
         skills[category].forEach(skill => {
             skillHTML += `
-                <div class="bar">
-                    <div class="info">
-                        <img src="${skill.icon}" alt="${skill.name}" />
-                        <span>${skill.name}</span>
-                    </div>
+                <div class="glass-card skill-item tilt">
+                    <img src="${skill.icon}" alt="${skill.name}" />
+                    <span>${skill.name}</span>
                 </div>`;
         });
 
@@ -113,7 +115,7 @@ function showSkills(skills) {
 }
 
 function showProjects(projects) {
-    let projectsContainer = document.querySelector("#work .box-container");
+    let projectsContainer = document.querySelector("#projects .box-container");
 
     if (!projectsContainer) {
         return;
@@ -122,21 +124,21 @@ function showProjects(projects) {
     let projectHTML = "";
     projects.filter(project => project.category != "android").forEach(project => {
         projectHTML += `
-        <div class="box tilt">
-      <img draggable="false" src="./assets/images/projects/${project.image}" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+        <div class="glass-card tilt project-card">
+          <img draggable="false" src="./assets/images/projects/${project.image}" alt="${project.name}" />
+          <div class="content">
+            <div class="tag">
+                <h3>${project.name}</h3>
+            </div>
+            <div class="desc">
+              <p>${project.desc}</p>
+              <div class="btns">
+                <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
+                <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>`
+        </div>`
     });
     projectsContainer.innerHTML = projectHTML;
 
@@ -160,27 +162,27 @@ function showProjects(projects) {
 }
 
 function showCertificates(certificates) {
-    let certificatesContainer = document.querySelector("#certificates .box-container");
+    const section = document.querySelector("#certificates");
+    if (!section) {
+        console.error("Certificates section not found!");
+        return;
+    }
 
-    // Switch to carousel layout if container exists
-    if (!certificatesContainer) {
-        // Check if we need to convert the container for carousel
-        let section = document.querySelector("#certificates");
-        if (section) {
-            section.innerHTML = `
-            <h2 class="heading"><i class="fas fa-certificate"></i> My <span>Certificates</span></h2>
-            <div class="carousel-container"></div>`;
-            certificatesContainer = section.querySelector(".carousel-container");
-        } else {
-            return;
-        }
+    // Ensure container exists
+    let container = section.querySelector(".box-container");
+    if (container) {
+        // Replace box-container with carousel-container for our new style
+        container.classList.remove("box-container", "grid-container");
+        container.classList.add("carousel-container");
+        container.innerHTML = ""; // Clear existing
     } else {
-        // If existing box-container is found, replace it with carousel container
-        let section = document.querySelector("#certificates");
-        section.innerHTML = `
-            <h2 class="heading"><i class="fas fa-certificate"></i> My <span>Certificates</span></h2>
-            <div class="carousel-container"></div>`;
-        certificatesContainer = section.querySelector(".carousel-container");
+        // Or find existing carousel-container
+        container = section.querySelector(".carousel-container");
+    }
+
+    if (!container) {
+        console.error("Certificates container not found!");
+        return;
     }
 
     // Sort certificates by ID
@@ -193,29 +195,34 @@ function showCertificates(certificates) {
 
     // Helper to generate row HTML
     const createRow = (items, reverse = false) => {
-        let rowContent = "";
-        // Duplicate items to ensure smooth infinite scroll (e.g., 6 times)
-        const repeatedItems = [...items, ...items, ...items, ...items, ...items, ...items];
+        // Duplicate items for infinite scroll illusion (x4)
+        const repeatedItems = [...items, ...items, ...items, ...items];
 
-        repeatedItems.forEach(cert => {
-            let imageSrc = cert.image === "placeholder.png" ? "https://via.placeholder.com/250x180?text=Certificate" : `./assets/images/certificates/${cert.image}`;
+        let rowContent = repeatedItems.map(cert => {
+            let imageSrc = cert.image === "placeholder.png"
+                ? "https://via.placeholder.com/300x200?text=Certificate"
+                : `./assets/images/certificates/${cert.image}`;
 
-            rowContent += `
-            <div class="certificate-card">
-                <img draggable="false" src="${imageSrc}" alt="${cert.name}" onerror="this.onerror=null;this.src='https://via.placeholder.com/250x180?text=Certificate';"/>
+            return `
+            <div class="certificate-card glass-card" style="padding:0; min-width:300px;">
+                <img draggable="false" 
+                     src="${imageSrc}" 
+                     alt="${cert.name}" 
+                     style="width:100%; height:100%; object-fit:cover; display:block;"
+                     onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200?text=Certificate';"/>
                 <div class="overlay">
-                    <a href="${cert.links.view}" class="btn" target="_blank">
+                    <a href="${cert.links.view}" class="btn" target="_blank" style="background:white; color:var(--primary);">
                         <i class="fas fa-eye"></i> View
                     </a>
                 </div>
             </div>`;
-        });
+        }).join('');
 
         return `<div class="carousel-row ${reverse ? 'reverse' : ''}">${rowContent}</div>`;
     };
 
     // Inject Rows
-    certificatesContainer.innerHTML = createRow(row1Data, false) + createRow(row2Data, true);
+    container.innerHTML = createRow(row1Data, false) + createRow(row2Data, true);
 }
 
 // Ensure data is loaded before calling display functions

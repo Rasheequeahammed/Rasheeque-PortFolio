@@ -6,567 +6,266 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords"
-    content="Rasheeque Ahammed Rahim, portfolio, Rasheeque, Data Scientist, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    content="Rasheeque Ahammed Rahim, portfolio, Data Scientist, AI Engineer, 3D Portfolio, Machine Learning" />
   <meta name="description"
-    content="Welcome to Rasheeque's Portfolio. Data Scientist Data Analyst and Machine Learning Enginner" />
+    content="Rasheeque's 'Quantum' Portfolio - Data Scientist & AI Engineer. Interactive 3D Experience." />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="./assets/images/misc/favicon1.png" type="image/x-png">
-  <title>Portfolio | Rasheeque </title>
+
+  <title>Rasheeque | AI & Data Scientist</title>
+
+  <!-- Three.js (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- Vanta.js or Custom Script will go here -->
 </head>
 
 <body oncontextmenu="return false">
+
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
 
   <!-- pre loader -->
   <!-- <div class="loader-container">
   <img draggable="false" src="./assets/images/preloader.gif" alt="">
 </div> -->
 
-  <!-- navbar starts -->
-  <header>
-    <a href="/" class="logo"><i class="fab fa-node-js"></i> Rasheeque</a>
+  <!-- 3D Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
 
+  <!-- Navbar -->
+  <header>
+    <a href="/" class="logo"><i class="fab fa-connectdevelop"></i> Rasheeque</a>
     <div id="menu" class="fas fa-bars"></div>
     <nav class="navbar">
       <ul>
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <!-- navbar ends -->
 
-
-  <!-- hero section starts -->
-  <section class="home" id="home">
-    <div id="particles-js"></div>
-
-    <div class="content">
-      <h2>Hi There,<br /> I'm Rasheeque<span>Ahammed Rahim</span></h2>
-      <p>i am into <span class="typing-text"></span></p>
-      <a href="#about" class="btn"><span>About Me</span>
-        <i class="fas fa-arrow-circle-down"></i>
-      </a>
-      <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank"><i
-                class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" aria-label="GitHub" href="https://github.com/Rasheequeahammed" target="_blank"><i
-                class="fab fa-github"></i></a></li>
-          <li>
-            <!--<a class="twitter" aria-label="Twitter" href="https://twitter.com/jigar_sable" target="_blank"><i class="fab fa-twitter"></i></a>-->
-          </li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/Rasheequeahammed" target="_blank"><i
-                class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/rasheeque_ahamed"><i
-                class="fab fa-instagram" target="_blank"></i></a></li>
-          <li>
-            <!--<a class="dev" aria-label="Dev" href="https://dev.to/jigarsable" target="_blank"><i class="fab fa-dev"></i></a>-->
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="image">
-      <img draggable="false" class="tilt" src="./assets/images/profile/hero.jpg" alt="">
-    </div>
-  </section>
-  <!-- hero section ends -->
-
-
-  <!-- about section starts -->
-  <section class="about" id="about">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-
-    <div class="row">
-
-      <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile/profile2.jpg" alt="">
-      </div>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
       <div class="content">
-        <h3>I'm Rasheeque</h3>
-        <span class="tag">Data Scientist</span>
-
-        <p> Motivated AI/ML Development Engineer with hands-on experience in building scalable machine learning and
-          deep learning solutions. Proficient in Python and frameworks like TensorFlow, PyTorch, and scikit-learn.
-          Demonstrated success in NLP, computer vision, and real-time ML applications. Strong analytical mindset and
-          collaborative approach, eager to contribute to innovative AI-driven products. </p>
-
-        <div class="box-container">
-          <!-- <div class="box">
-              <p><span> age: </span> 20</p>
-              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
-            </div> -->
-          <div class="box">
-            <p><span> email : </span> rasheequeraheem78@gmail.com</p>
-            <p><span> place : </span> Kerala, India - 670701</p>
-          </div>
+        <h2>Hello,<br>I'm <span class="text-gradient">Rasheeque</span></h2>
+        <h3 style="font-size: 2.5rem; margin-bottom: 2rem;">I am a <span class="typing-text"
+            style="color:var(--secondary);"></span></h3>
+        <p>Data Scientist & AI Engineer building intelligent systems.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Rasheequeahammed" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:rasheequeraheem78@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://t.me/Rasheequeahammed" target="_blank"><i class="fab fa-telegram-plane"></i></a>
         </div>
+        <br>
+        <a href="#about" class="btn">View My Work <i class="fas fa-arrow-down"></i></a>
+      </div>
+    </div>
+    <!-- 3D Background Interaction Area is the whole screen -->
+  </section>
 
-        <div class="resumebtn">
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="glass-card about-content">
+        <div class="about-img">
+          <!-- Using existing image path -->
+          <img src="./assets/images/profile/profile2.jpg" alt="Rasheeque" style="width:100%; height:auto;">
+        </div>
+        <div class="about-text">
+          <h3>I'm an AI Enthusiast from Kerala, India.</h3>
+          <p style="margin: 1.5rem 0; color: var(--text-muted);">
+            Motivated AI/ML Development Engineer with hands-on experience in building scalable machine learning and deep
+            learning solutions. Proficient in Python, TensorFlow, PyTorch, and NLP.
+          </p>
+          <div class="grid-container" style="margin-bottom: 2rem;">
+            <div>
+              <strong>Email:</strong> rasheequeraheem78@gmail.com
+            </div>
+            <div>
+              <strong>Location:</strong> Kerala, India
+            </div>
+          </div>
           <a href="https://drive.google.com/file/d/1fIS4qgvd2s7hiZ1prhsJMhGLaLPoE50k/view?usp=drive_link"
-            target="_blank" class="btn"><span>Resume</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
+            target="_blank" class="btn">Download Resume <i class="fas fa-download"></i></a>
         </div>
-
       </div>
     </div>
   </section>
-  <!-- about section ends -->
 
-  <!-- skills section starts -->
-  <section class="skills" id="skills">
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+  <!-- Skills Section -->
+  <section id="skills">
     <div class="container">
-      <div class="row" id="skillsContainer">
-
-        <!-- Skill : Python -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python Icon" />
-            <span>Python</span>
-          </div>
+      <h2 class="section-title">Skills</h2>
+      <div id="skillsContainer" class="grid-container">
+        <!-- Skills will be loaded by data-skills.js, but we need to ensure their styles work -->
+        <!-- Just a placeholder for now to see layout -->
+        <div class="glass-card" style="text-align:center;">
+          <i class="fab fa-python" style="font-size: 3rem; color: var(--secondary);"></i>
+          <h3 style="margin-top: 1rem;">Python</h3>
         </div>
-
-        <!-- Skill : TensorFlow -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow Icon" />
-            <span>TensorFlow</span>
-          </div>
-        </div>
-
-        <!-- Skill : AWS -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="AWS Icon" />
-            <span>AWS</span>
-          </div>
-        </div>
-
-        <!-- Google Cloud Platform -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/google-cloud.png" alt="GCP Icon" />
-            <span>Google Cloud Platform</span>
-          </div>
-        </div>
-
-
-        <!-- Skill : Jupyter -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/fluency/48/000000/jupyter.png" alt="Jupyter Icon" />
-            <span>Jupyter</span>
-          </div>
-        </div>
-
-
-        <!-- Skill : Scikit-Learn -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn Icon"
-              width="100" />
-            <span>Scikit-Learn</span>
-          </div>
-        </div>
-
-        <!-- Skill: Power BI -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI Icon" width="48" />
-            <span>Power BI</span>
-          </div>
-        </div>
-
-        <!-- Skill: Excel -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel Icon" width="48" />
-            <span>Excel</span>
-          </div>
-        </div>
-
-
-        <!-- Skill: Tableau -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/tableau-software.png" alt="Tableau Icon" width="48" />
-            <span>Tableau</span>
-          </div>
-        </div>
-
-        <!-- Skill: MySQL -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL Icon" width="48" />
-            <span>MySQL</span>
-          </div>
-        </div>
-
-        <!-- Skill: PostgreSQL -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/postgreesql.png" alt="PostgreSQL Icon" width="48" />
-            <span>PostgreSQL</span>
-          </div>
-        </div>
-
-        <!-- Pandas -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas Icon" />
-            <span>Pandas</span>
-          </div>
-        </div>
-
-        <!-- NumPy -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy Icon" />
-            <span>NumPy</span>
-          </div>
-        </div>
-
-        <!-- Google Analytics -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/google-analytics.png" alt="Google Analytics Icon" />
-            <span>Google Analytics</span>
-          </div>
-        </div>
-
-        <!-- R -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/r.png" alt="R Icon" />
-            <span>R</span>
-          </div>
-        </div>
-
-        <!-- MongoDB -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB Icon" />
-            <span>MongoDB</span>
-          </div>
-        </div>
-
-        <!-- YOLO -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/color/48/000000/yolo.png" alt="YOLO Icon" />
-            <span>YOLO</span>
-          </div>
-        </div>
-
-        <!-- GitHub -->
-        <div class="bar">
-          <div class="info">
-            <img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="GitHub Icon" />
-            <span>GitHub</span>
-          </div>
-        </div>
-
-
-
-
-
-
-        <!-- Add more machine learning-related skills similarly -->
-
       </div>
     </div>
   </section>
 
-  <!-- skills section ends -->
-
-
-  <!-- education section starts -->
-  <section class="education" id="education">
-
-    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-
-    <div class="box-container">
-
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/education/pg.jpeg" alt="">
-        </div>
-        <div class="content">
-          <h3>Master of Computer Application (MCA) Specialized in Artificial Intelligence </h3>
-          <p>Amrita Ahead | Amrita University</p>
-          <h4>2023-2025 | Completed with Grade 'A'</h4>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/education/SUNY_.jpg" alt="">
-        </div>
-        <div class="content">
-          <h3>Postgraduate Diploma in Artificial Intelligence</h3>
-          <p>The State University of New York (SUNY) at Potsdam, USA</p>
-          <h4>2024 | Completed with Grade 'A'</h4>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="image">
-          <img draggable="false" src="./assets/images/education/college.jpeg" alt="">
-        </div>
-        <div class="content">
-          <h3>Bachelor of Science in Computer Science</h3>
-          <p>College of Applied Science Koothuparamba | Kannur University</p>
-          <h4>2020-2023 | Completed with Grade 'A'</h4>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- education section ends -->
-
-
-  <!-- work project section starts -->
-  <section class="work" id="work">
-
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-
-    <div class="box-container">
-      <!-- Projects will be loaded dynamically from JSON -->
-    </div>
-
-    <div class="viewall">
-      <a href="./pages/projects.html" class="btn"><span>View All</span>
-        <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
-
-  </section>
-  <!-- work project section ends -->
-
-
-
-  <!-- experience section starts -->
-  <section class="experience" id="experience">
-
-    <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
-
-    <div class="timeline">
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Think Neural AI</h2>
-          </div>
-          <div class="desc">
-            <h3>AI ML Development Engineer</h3>
-            <p>May 2025 - Present</p>
-          </div>
-        </div>
-      </div>
-
-      <!--<div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Self Employed</h2>
-        </div>
-        <div class="desc">
-            <h3>Full Stack Developer</h3>
-            <p>Oct 2021 - present</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Mapstreak Flyseas</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Developer | Internship</h3>
-            <p>June 2021 - Dec 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Website Developer | Internship</h3>
-            <p>May 2021 - June 2021</p>
-        </div>
-      </div>
-    </div> -->
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>Aispry</h2>
-          </div>
-          <div class="desc">
-            <h3>Data Scientist | Internship</h3>
-            <p>May 2024 - June 2024</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Innodatatics</h2>
-          </div>
-          <div class="desc">
-            <h3>Data Scientist | Internship</h3>
-            <p>March 2024 - April 2024</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>RISS Technologies</h2>
-          </div>
-          <div class="desc">
-            <h3>Software Developer | Internship</h3>
-            <p>November 2022 - April 2023</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="morebtn">
-      <a href="#experience" class="btn"><span>View All</span>
-        <i class="fas fa-arrow-right"></i>
-      </a>
-    </div>
-
-    </div>
-
-  </section>
-  <!-- experience section ends -->
-
-  <!-- certificates section starts -->
-  <section class="work" id="certificates">
-
-    <h2 class="heading"><i class="fas fa-certificate"></i> My <span>Certificates</span></h2>
-
-    <div class="box-container">
-      <!-- Certificates will be loaded dynamically from JSON -->
-    </div>
-
-  </section>
-  <!-- certificates section ends -->
-
-  <!-- contact section starts -->
-  <section class="contact" id="contact">
-
-    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
+  <!-- Education Section -->
+  <section id="education">
     <div class="container">
-      <div class="content">
-        <div class="image-box">
-          <img draggable="false" src="./assets/images/misc/contact1.png" alt="">
+      <h2 class="section-title">Education</h2>
+      <div class="glass-card" style="display:flex; flex-direction:column; gap:2rem;">
+
+        <div style="display:flex; gap:2rem; align-items:center;">
+          <img src="./assets/images/education/pg.jpeg" alt="Amrita"
+            style="width:80px; height:80px; border-radius:10px; object-fit:cover;">
+          <div>
+            <h3 style="color:var(--primary);">Master of Computer Application (MCA) in AI</h3>
+            <p style="color:var(--text-muted);">Amrita Ahead | Amrita University</p>
+            <p><strong>2023-2025 | Grade 'A'</strong></p>
+          </div>
         </div>
+
+        <hr style="border-color:var(--glass-border);">
+
+        <div style="display:flex; gap:2rem; align-items:center;">
+          <img src="./assets/images/education/SUNY_.jpg" alt="SUNY"
+            style="width:80px; height:80px; border-radius:10px; object-fit:cover;">
+          <div>
+            <h3 style="color:var(--primary);">Postgraduate Diploma in AI</h3>
+            <p style="color:var(--text-muted);">SUNY Potsdam, USA</p>
+            <p><strong>2024 | Grade 'A'</strong></p>
+          </div>
+        </div>
+
+        <hr style="border-color:var(--glass-border);">
+
+        <div style="display:flex; gap:2rem; align-items:center;">
+          <img src="./assets/images/education/college.jpeg" alt="College"
+            style="width:80px; height:80px; border-radius:10px; object-fit:cover;">
+          <div>
+            <h3 style="color:var(--primary);">BSc Computer Science</h3>
+            <p style="color:var(--text-muted);">Kannur University</p>
+            <p><strong>2020-2023 | Grade 'A'</strong></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="grid-container">
+
+        <div class="glass-card">
+          <span style="color:var(--secondary); font-size:1.4rem;">May 2025 - Present</span>
+          <h3 style="margin: 1rem 0;">AI ML Development Engineer</h3>
+          <p style="color:var(--text-muted);">Think Neural AI</p>
+        </div>
+
+        <div class="glass-card">
+          <span style="color:var(--secondary); font-size:1.4rem;">May 2024 - June 2024</span>
+          <h3 style="margin: 1rem 0;">Data Scientist Intern</h3>
+          <p style="color:var(--text-muted);">Aispry</p>
+        </div>
+
+        <div class="glass-card">
+          <span style="color:var(--secondary); font-size:1.4rem;">Mar 2024 - Apr 2024</span>
+          <h3 style="margin: 1rem 0;">Data Scientist Intern</h3>
+          <p style="color:var(--text-muted);">Innodatatics</p>
+        </div>
+
+        <div class="glass-card">
+          <span style="color:var(--secondary); font-size:1.4rem;">Nov 2022 - Apr 2023</span>
+          <h3 style="margin: 1rem 0;">Software Developer Intern</h3>
+          <p style="color:var(--text-muted);">RISS Technologies</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (renamed from 'work') -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="box-container grid-container">
+        <!-- Projects loaded via JS -->
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="./pages/projects.html" class="btn">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <div class="container">
+      <h2 class="section-title">Certificates</h2>
+      <div class="carousel-container">
+        <!-- Certificates loaded via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
         <form id="contact-form">
-
-          <div class="form-group">
-            <div class="field">
-              <input type="text" name="name" placeholder="Name" required>
-              <i class='fas fa-user'></i>
-            </div>
-            <div class="field">
-              <input type="text" name="email" placeholder="Email" required>
-              <i class='fas fa-envelope'></i>
-            </div>
-            <div class="field">
-              <input type="text" name="phone" placeholder="Phone">
-              <i class='fas fa-phone-alt'></i>
-            </div>
-            <div class="message">
-              <textarea placeholder="Message" name="message" required></textarea>
-              <i class="fas fa-comment-dots"></i>
-            </div>
-          </div>
-          <div class="button-area">
-            <button type="submit">
-              Submit <i class="fa fa-paper-plane"></i></button>
+          <div style="display:flex; flex-direction:column; gap:1.5rem;">
+            <input type="text" name="name" placeholder="Name" class="glass-card"
+              style="width:100%; border:1px solid var(--glass-border); background:rgba(255,255,255,0.05); color:var(--text-main); padding:1rem;">
+            <input type="email" name="email" placeholder="Email" class="glass-card"
+              style="width:100%; border:1px solid var(--glass-border); background:rgba(255,255,255,0.05); color:var(--text-main); padding:1rem;">
+            <textarea name="message" placeholder="Message" cols="30" rows="5" class="glass-card"
+              style="width:100%; border:1px solid var(--glass-border); background:rgba(255,255,255,0.05); color:var(--text-main); padding:1rem;"></textarea>
+            <button type="submit" class="btn" style="width:100%;">Send Message <i
+                class="fas fa-paper-plane"></i></button>
           </div>
         </form>
-      </div>
-    </div>
-  </section>
-  <!-- contact section ends -->
-
-
-  <!-- footer section starts -->
-  <section class="footer">
-
-    <div class="box-container">
-
-      <div class="box">
-        <h3>Rasheeque's Portfolio</h3>
-        <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /> <br /> Keep Rising
-          🚀. Connect with me over live chat!</p>
-      </div>
-
-      <div class="box">
-        <h3>quick links</h3>
-        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-        <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-        <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-        <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
-
-      <div class="box">
-        <h3>contact info</h3>
-        <p> <i class="fas fa-phone"></i>+91 9207252943</p>
-        <p> <i class="fas fa-envelope"></i>rasheequeraheem78@gmail.com</p>
-        <p> <i class="fas fa-map-marked-alt"></i>Kerala, India-670701</p>
-        <div class="share">
-
-          <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" class="fab fa-linkedin"
-            aria-label="LinkedIn" target="_blank"></a>
-          <a href="https://github.com/Rasheequeahammed" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-          <a href="mailto:rasheequeraheem78@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
-          <!-- <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a> -->
-          <a href="https://t.me/Rasheequeahammed" class="fab fa-telegram-plane" aria-label="Telegram"
-            target="_blank"></a>
+        <div style="margin-top:2rem; text-align:center;">
+          <p>Email: <a href="mailto:rasheequeraheem78@gmail.com"
+              style="color:var(--primary);">rasheequeraheem78@gmail.com</a></p>
+          <div class="socials" style="justify-content:center; margin-top:1rem;">
+            <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Rasheequeahammed" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/Rasheequeahammed" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          </div>
         </div>
       </div>
     </div>
-
-    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a
-        href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a"> Rasheeque Ahammed Rahim</a></h1>
-
   </section>
-  <!-- footer section ends -->
 
-
-  <!-- scroll top btn -->
-  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-  <!-- scroll back to top -->
+  <!-- Footer -->
+  <footer>
+    <p>Designed with <i class="fas fa-heart" style="color:var(--accent);"></i> by Rasheeque</p>
+    <p>&copy; 2025 All Rights Reserved.</p>
+  </footer>
 
 
   <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
@@ -600,6 +299,7 @@
   <script src="./assets/js/data-projects.js"></script>
   <script src="./assets/js/data-certificates.js"></script>
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/three-bg.js"></script>
 
 </body>
 
