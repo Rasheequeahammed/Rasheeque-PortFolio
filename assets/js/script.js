@@ -79,29 +79,22 @@ var typed = new Typed(".typing-text", {
 });
 // <!-- typed js effect ends -->
 
-async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-        response = await fetch("assets/data/skills.json")
-        :
-        response = await fetch("./assets/data/projects.json")
-    const data = await response.json();
-    return data;
-}
+// Data is now loaded from data-skills.js, data-projects.js, and data-certificates.js
+// accessed via global variables: skillsData, projectsData, certificatesData
 
-function showSkills(skillsData) {
+function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
-    
+
     // Loop through each category
-    for (let category in skillsData) {
+    for (let category in skills) {
         skillHTML += `
             <div class="skill-category">
                 <h3 class="category-title">${category}</h3>
                 <div class="skills-grid">`;
-        
+
         // Loop through skills in this category
-        skillsData[category].forEach(skill => {
+        skills[category].forEach(skill => {
             skillHTML += `
                 <div class="bar">
                     <div class="info">
@@ -110,22 +103,22 @@ function showSkills(skillsData) {
                     </div>
                 </div>`;
         });
-        
+
         skillHTML += `
                 </div>
             </div>`;
     }
-    
+
     skillsContainer.innerHTML = skillHTML;
 }
 
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
-    
+
     if (!projectsContainer) {
         return;
     }
-    
+
     let projectHTML = "";
     projects.filter(project => project.category != "android").forEach(project => {
         projectHTML += `
@@ -166,13 +159,70 @@ function showProjects(projects) {
 
 }
 
-fetchData().then(data => {
-    showSkills(data);
-});
+function showCertificates(certificates) {
+    let certificatesContainer = document.querySelector("#certificates .box-container");
 
-fetchData("projects").then(data => {
-    showProjects(data);
-});
+    // Switch to carousel layout if container exists
+    if (!certificatesContainer) {
+        // Check if we need to convert the container for carousel
+        let section = document.querySelector("#certificates");
+        if (section) {
+            section.innerHTML = `
+            <h2 class="heading"><i class="fas fa-certificate"></i> My <span>Certificates</span></h2>
+            <div class="carousel-container"></div>`;
+            certificatesContainer = section.querySelector(".carousel-container");
+        } else {
+            return;
+        }
+    } else {
+        // If existing box-container is found, replace it with carousel container
+        let section = document.querySelector("#certificates");
+        section.innerHTML = `
+            <h2 class="heading"><i class="fas fa-certificate"></i> My <span>Certificates</span></h2>
+            <div class="carousel-container"></div>`;
+        certificatesContainer = section.querySelector(".carousel-container");
+    }
+
+    // Sort certificates by ID
+    certificates.sort((a, b) => a.id - b.id);
+
+    // Split into two rows
+    const mid = Math.ceil(certificates.length / 2);
+    const row1Data = certificates.slice(0, mid);
+    const row2Data = certificates.slice(mid);
+
+    // Helper to generate row HTML
+    const createRow = (items, reverse = false) => {
+        let rowContent = "";
+        // Duplicate items to ensure smooth infinite scroll (e.g., 6 times)
+        const repeatedItems = [...items, ...items, ...items, ...items, ...items, ...items];
+
+        repeatedItems.forEach(cert => {
+            let imageSrc = cert.image === "placeholder.png" ? "https://via.placeholder.com/250x180?text=Certificate" : `./assets/images/certificates/${cert.image}`;
+
+            rowContent += `
+            <div class="certificate-card">
+                <img draggable="false" src="${imageSrc}" alt="${cert.name}" onerror="this.onerror=null;this.src='https://via.placeholder.com/250x180?text=Certificate';"/>
+                <div class="overlay">
+                    <a href="${cert.links.view}" class="btn" target="_blank">
+                        <i class="fas fa-eye"></i> View
+                    </a>
+                </div>
+            </div>`;
+        });
+
+        return `<div class="carousel-row ${reverse ? 'reverse' : ''}">${rowContent}</div>`;
+    };
+
+    // Inject Rows
+    certificatesContainer.innerHTML = createRow(row1Data, false) + createRow(row2Data, true);
+}
+
+// Ensure data is loaded before calling display functions
+// Using simple check since scripts are loaded synchronously in order
+if (typeof skillsData !== 'undefined') showSkills(skillsData);
+if (typeof projectsData !== 'undefined') showProjects(projectsData);
+if (typeof certificatesData !== 'undefined') showCertificates(certificatesData);
 
 // <!-- tilt js effect starts -->
 VanillaTilt.init(document.querySelectorAll(".tilt"), {

@@ -1,0 +1,189 @@
+[
+    {
+        "id": 1,
+        "name": "Artificial Intelligence Diploma",
+        "desc": "Diploma in AI covering advanced machine learning and deep learning concepts.",
+        "image": "Ai-Diploma.png",
+        "category": "ai",
+        "links": {
+            "view": "./assets/data/Certificates/Ai-Diploma.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Microsoft AI & ML Engineering",
+        "desc": "Certification in AI and Machine Learning Engineering from Microsoft.",
+        "image": "Microsoft AI & ML Engineering.png",
+        "category": "ai",
+        "links": {
+            "view": "./assets/data/Certificates/Microsoft AI & ML Engineering.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 3,
+        "name": "IBM Generative AI Engineering",
+        "desc": "Specialized certification in Generative AI Engineering from IBM.",
+        "image": "IBM Generative AI Engineering.png",
+        "category": "ai",
+        "links": {
+            "view": "./assets/data/Certificates/IBM Generative AI Engineering.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Data Science & ML Certificate",
+        "desc": "Comprehensive certification in Data Science and Machine Learning methodologies.",
+        "image": "DS ML CERTIFICATE.png",
+        "category": "data_science",
+        "links": {
+            "view": "./assets/data/Certificates/DS ML CERTIFICATE.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 5,
+        "name": "NASSCOM Data Science",
+        "desc": "Industry-recognized certification in Data Science from NASSCOM.",
+        "image": "NASSCOM DATA SCIENCE CERTIFICATE.png",
+        "category": "data_science",
+        "links": {
+            "view": "./assets/data/Certificates/NASSCOM DATA SCIENCE CERTIFICATE.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Machine Learning for Supply Chain",
+        "desc": "Applied Machine Learning certification for Supply Chain Management.",
+        "image": "Machine Learning for Supply Chain.png",
+        "category": "ai",
+        "links": {
+            "view": "./assets/data/Certificates/Machine Learning for Supply Chain.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 7,
+        "name": "NASSCOM Python",
+        "desc": "Certification in Python programming for Data Science and AI applications.",
+        "image": "NASSCOM PYTHON CERTIFICATE.png",
+        "category": "programming",
+        "links": {
+            "view": "./assets/data/Certificates/NASSCOM PYTHON CERTIFICATE.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Python Certificate",
+        "desc": "Fundamental and advanced concepts of Python programming.",
+        "image": "python.png",
+        "category": "programming",
+        "links": {
+            "view": "./assets/data/Certificates/python.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 9,
+        "name": "PDS Certificate",
+        "desc": "Professional Data Science certification.",
+        "image": "PDS certificate.png",
+        "category": "data_science",
+        "links": {
+            "view": "./assets/data/Certificates/PDS certificate.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 10,
+        "name": "AI Certificate",
+        "desc": "Certificate of completion for Artificial Intelligence coursework.",
+        "image": "Ai certificate.png",
+        "category": "ai",
+        "links": {
+            "view": "./assets/data/Certificates/Ai certificate.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Power BI Certificate",
+        "desc": "Certification in data visualization and business intelligence using Power BI.",
+        "image": "PwerBi.png",
+        "category": "data_viz",
+        "links": {
+            "view": "./assets/data/Certificates/PwerBi.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Tableau Certificate",
+        "desc": "Certification in creating interactive data visualizations with Tableau.",
+        "image": "tableau.png",
+        "category": "data_viz",
+        "links": {
+            "view": "./assets/data/Certificates/tableau.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 13,
+        "name": "SQL Certificate",
+        "desc": "Proficiency in SQL for database management and data manipulation.",
+        "image": "SQL.png",
+        "category": "database",
+        "links": {
+            "view": "./assets/data/Certificates/SQL.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Udemy Certificate",
+        "desc": "Certificate of completion from Udemy.",
+        "image": "UDEMY.png",
+        "category": "course",
+        "links": {
+            "view": "./assets/data/Certificates/UDEMY.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 15,
+        "name": "TCS Youth Employment",
+        "desc": "TCS Youth Employment Program certification.",
+        "image": "TCS YOP rasheeque.png",
+        "category": "course",
+        "links": {
+            "view": "./assets/data/Certificates/TCS YOP rasheeque.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 16,
+        "name": "TCS Accounting Fundamentals",
+        "desc": "Certification in Accounting Fundamentals from TCS.",
+        "image": "TCS accountuing fundamentals.png",
+        "category": "course",
+        "links": {
+            "view": "./assets/data/Certificates/TCS accountuing fundamentals.pdf",
+            "code": "#"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Work Readiness Certificate",
+        "desc": "Certificate demonstrating work readiness skills.",
+        "image": "certificate_workreadiness.png",
+        "category": "course",
+        "links": {
+            "view": "./assets/data/Certificates/certificate_workreadiness.pdf",
+            "code": "#"
+        }
+    }
+]

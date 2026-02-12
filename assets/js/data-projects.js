@@ -1,0 +1,62 @@
+const projectsData = [
+    {
+        "name": "Sakshi.AI (ThinkNeural)",
+        "desc": "Developed high-performance Machine Learning pipelines for a real-time intelligent video analytics and surveillance platform. Engineered vision models for automated object detection, behavioral analysis, and anomaly recognition to enhance security and operational monitoring. Implemented scalable video processing workflows that provide actionable insights from live camera feeds for retail and industrial environments.",
+        "image": "sakshi.png",
+        "category": "machine_learning",
+        "links": {
+            "view": "https://thinkneural.ai/sakshi.html",
+            "code": "https://thinkneural.ai/sakshi.html"
+        }
+    },
+    {
+        "name": "SpaceZap.AI (ThinkNeural)",
+        "desc": "Engineered ML pipelines for an AI-driven spatial platform that automates retail site surveys and 3D fit-out designs. Developed computer vision models for boundary detection and automated the conversion of raw scan data into structured, CAD-ready 2D/3D layouts. Optimized generative design logic to enable rapid, brand-consistent store rollouts for major clients like Lenskart and MR.DIY.",
+        "image": "spacezapp.jpg",
+        "category": "machine_learning",
+        "links": {
+            "view": "https://thinkneural.ai/spacezap.html",
+            "code": "https://thinkneural.ai/spacezap.html"
+        }
+    },
+    {
+        "name": "Retail Management System",
+        "desc": "A comprehensive retail management system built with FastAPI and React, featuring point-of-sale operations, inventory management, and multi-store support. Includes AI-powered analytics for sales forecasting, customer insights, and automated business intelligence reporting.",
+        "image": "RTS.png",
+        "category": "full_stack",
+        "links": {
+            "view": "https://drive.google.com/file/d/1EU_KB4HTpBb-MkS8ltj4wF7MnnHHvXbP/view?usp=sharing",
+            "code": "https://github.com/Rasheequeahammed/POS_System.git"
+        }
+    },
+    {
+        "name": "Solar Power Generation Prediction",
+        "desc": "Developed a Solar Power Generation Prediction model to enhance energy production and reliability using machine learning, improving system efficiency by detecting defects and optimizing maintenance.",
+        "image": "Solar_power.jpeg",
+        "category": "machine_learning",
+        "links": {
+            "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
+            "code": "https://github.com/Rasheequeahammed/SolarIQ"
+        }
+    },
+    {
+        "name": "Vial and Syringe Counting System",
+        "desc": "Developed a Vial and Syringe Counting System using image processing to automate counting in production lines, enhancing accuracy and minimizing manual intervention.",
+        "image": "Syringe_and_vial.jpeg",
+        "category": "image_processing",
+        "links": {
+            "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
+            "code": "https://github.com/Rasheequeahammed/SolarIQ"
+        }
+    },
+    {
+        "name": "Fruit and Vegetable Detection",
+        "desc": "Built a system to detect and identify fruits or vegetables from images using machine learning and image processing.",
+        "image": "Fruit_and_veg.jpeg",
+        "category": "machine_learning",
+        "links": {
+            "view": "https://drive.google.com/file/d/1-4wDVjN2UupI72ULD_a8H-8Owebx5Vzx/view?usp=drive_link",
+            "code": "https://github.com/Rasheequeahammed/SolarIQ"
+        }
+    }
+];
