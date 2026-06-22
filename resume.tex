@@ -30,11 +30,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins - tighter for one page
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.6in}
-\addtolength{\textwidth}{1.2in}
-\addtolength{\topmargin}{-.6in}
-\addtolength{\textheight}{1.2in}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.5in}
 
 \urlstyle{same}
 
@@ -44,8 +44,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that PDF is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -54,7 +54,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
@@ -63,21 +63,21 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-3pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt, topsep=1pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=1pt, topsep=1pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -88,27 +88,30 @@
 %----------HEADING - CENTERED----------
 \begin{center}
     \textbf{\Huge \scshape Rasheeque Ahammed Rahim} \\ \vspace{1pt}
-    \small Software Engineer \\ \vspace{3pt}
+  \small AI/ML Engineer $|$ Model Development \& LLM Ops $|$ Debugging \& Research $|$ Production ML \\ \vspace{4pt}
     \small \href{mailto:rasheequeraheem78@gmail.com}{rasheequeraheem78@gmail.com} $|$ 
     +91 9207252943 $|$ 
     \href{https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a}{LinkedIn} $|$
     \href{https://github.com/Rasheequeahammed}{GitHub} $|$
     \href{https://rasheequeahammed.github.io/Rasheeque-PortFolio/}{Portfolio}
 \end{center}
-\vspace{-5pt}
+\vspace{-3pt}
 
 %-----------SUMMARY-----------
 \section{Professional Summary}
-  \small{Software Engineer with a strong foundation in building scalable backend systems and microservices using Python and FastAPI. Passionate about writing clean, maintainable code adhering to SOLID principles and Object-Oriented Design. Experienced in designing RESTful APIs, optimizing database performance, and deploying cloud-native applications on AWS. collaborative team player committed to delivering high-quality software in fast-paced Agile environments.}
+  \small{Problem-driven AI/ML Engineer specializing in model development, debugging, and productionization. I design, refine, and deploy predictive and generative models, investigate root causes of model failures, and implement robust retraining and monitoring workflows. Experienced with LLM operations and guardrails, RAG-based retrieval, and building evaluation/validation harnesses for safe, high-quality outputs. Comfortable translating research into practical systems and collaborating cross-functionally to ship reliable AI products.}
+\vspace{-6pt}
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Backend Development:} Microservices Architecture, API Design (REST), System Scalability, Clean Code, SOLID Principles, OOP, Design Patterns \\
-     \textbf{Languages \& Databases:} Python (Advanced), SQL (MySQL, PostgreSQL), NoSQL (MongoDB), C++, JavaScript \\
-     \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda), Docker, CI/CD Pipelines, Git, Linux \\
-     \textbf{Core Competencies:} Algorithm Optimization, Problem Solving, Agile Methodologies, Cross-functional Collaboration \\ \textbf{Certifications:} AWS Certified Cloud Practitioner, IBM Backend Development
+  \textbf{Model Development \& Debugging:} Model diagnostics, root-cause analysis, performance profiling, monitoring, unit tests, A/B testing, evaluation metrics \\
+  \textbf{LLM Operations:} Prompt engineering, RAG pipelines, guardrails, safety checks, evaluation harnesses, retraining workflows, LangChain, LangGraph \\
+  \textbf{ML Frameworks:} PyTorch, TensorFlow, Scikit-Learn, Keras, model training, evaluation, hyperparameter tuning \\
+  \textbf{Computer Vision:} OpenCV, object detection (YOLO), image segmentation, custom dataset training, data augmentation \\
+  \textbf{Programming \& Data:} Python, Pandas, NumPy, SQL, ETL, feature engineering, statistical analysis \\
+  \textbf{Deployment \& MLOps:} FastAPI, REST APIs, Docker, Kubernetes basics, CI/CD, model versioning, cloud platforms (AWS, GCP, Azure)
     }}
  \end{itemize}
  \vspace{-8pt}
@@ -121,17 +124,17 @@
       {AI ML Development Engineer}{May 2025 -- Present}
       {Think Neural AI}{Remote}
       \resumeItemListStart
-        \resumeItem{Developed scalable backend services for processing high-volume retail sensor data, reducing API latency by 40\% through code optimization and efficient database indexing.}
-        \resumeItem{Collaborated with cross-functional Agile teams to design and implement robust microservices, ensuring high availability and system reliability.}
-        \resumeItem{Refactored legacy codebases to improve readability and maintainability, implementing automated testing frameworks to ensure code quality.}
+        \resumeItem{Designed, tuned, and deployed predictive and generative models; conducted detailed model diagnostics and root-cause analysis to resolve failures and improve reliability.}
+        \resumeItem{Implemented LLM operations and RAG pipelines with guardrails and evaluation harnesses; designed retraining triggers and model monitoring for continuous improvement.}
+        \resumeItem{Built API-driven model services (FastAPI) and containerized deployments (Docker); partnered with engineering on CI/CD integration, testing, and performance optimization for production readiness.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Data Scientist Intern}{March 2024 -- October 2024}
       {Innodatatics}{Bangalore, India}
       \resumeItemListStart
-        \resumeItem{Designed and maintained normalized database schemas for large-scale customer data, ensuring data integrity and optimizing query performance.}
-        \resumeItem{Built and deployed RESTful APIs to support internal data dashboards, enabling real-time data access for operations teams.}
+        \resumeItem{Developed and debugged NLP models, performing error analysis and iterative improvements through feature engineering and statistical validation.}
+        \resumeItem{Applied supervised and unsupervised algorithms, supported ETL and preprocessing pipelines, and produced clear experiment reports to communicate model behavior and recurring issues.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -142,24 +145,24 @@
     \resumeSubHeadingListStart
     
       \resumeProjectHeading
-          {\textbf{Retail Management System (Microservices)}}{May 2024 -- Present}
+          {\textbf{Sakshi.AI - Real-Time Video Analytics Platform}}{May 2025 -- Present}
           \resumeItemListStart
-            \resumeItem{Architected a comprehensive retail management system using FastAPI and React, featuring a microservices-based backend for modular scalability.}
-            \resumeItem{Implemented secure authentication, inventory management, and real-time sales tracking, deploying the solution on AWS using Docker containers. \textit{Tech: Python, FastAPI, React, Docker, AWS}}
+            \resumeItem{Built a real-time computer vision system with object detection (YOLO), custom segmentation models, and intelligent video analytics across 100+ camera feeds using PyTorch and OpenCV.}
+            \resumeItem{Deployed production-ready inference service using FastAPI with Docker containerization; optimized model latency and accuracy for real-time edge deployment scenarios. \textit{Tech: PyTorch, YOLO, OpenCV, FastAPI, Docker, Python}}
           \resumeItemListEnd
-          
+
       \resumeProjectHeading
-          {\textbf{Sakshi.AI - High-Performance Video Analytics}}{May 2025 -- Present}
+          {\textbf{Generative AI Assistant - RAG \& LLM Fine-tuning}}{November 2024 -- January 2025}
           \resumeItemListStart
-            \resumeItem{Engineered high-throughput video processing pipelines capable of handling multiple real-time streams with minimal latency.}
-            \resumeItem{Optimized computer vision algorithms for edge devices, reducing computational load while maintaining detection accuracy. \textit{Tech: Python, OpenCV, System Optimization}}
+            \resumeItem{Designed and implemented an LLM use case with production guardrails: fine-tuning, RAG retrieval, safety filters, and an automated evaluation harness to measure output quality under realistic scenarios.}
+            \resumeItem{Established retraining pipelines and monitoring metrics to detect drift and trigger model refresh; documented lessons learned and literature review insights to guide model improvements. \textit{Tech: PyTorch, LangChain, Hugging Face, ChromaDB, FastAPI}}
           \resumeItemListEnd
-          
+
       \resumeProjectHeading
-          {\textbf{Solar Power System Reliability Optimization}}{November 2024 -- January 2025}
+          {\textbf{SpaceZap.AI - Spatial AI \& Generative Design System}}{May 2025 -- Present}
           \resumeItemListStart
-            \resumeItem{Developed a predictive maintenance system using machine learning to detect component defects early, enhancing overall system reliability and uptime.}
-            \resumeItem{Integrated data processing modules to analyze historical generation patterns, optimizing energy output efficiency. \textit{Tech: Python, ML Pipelines, Reliability Engineering}}
+            \resumeItem{Developed a generative AI system combining computer vision (3D point cloud processing) and deep learning models for intelligent spatial design generation across 50+ retail scenarios.}
+            \resumeItem{Engineered API service using FastAPI, containerized with Docker for cloud deployment; integrated model serving, validation pipelines, and scalable inference. \textit{Tech: PyTorch, OpenCV, FastAPI, Docker, Python, SQL}}
           \resumeItemListEnd
           
     \resumeSubHeadingListEnd
@@ -170,7 +173,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Masters in Computer Application (MCA) - AI Specialization}{2023 -- 2025}
-      {Amrita Vishwa Vidyapeetham (Amrita AHEAD)}{}
+      {Amrita Vishwa Vidyapeetham (Amrita AHEAD) - Focus: ML, GenAI, Deep Learning, NLP}{ }
     \resumeSubheading
       {Bachelor of Science in Computer Science}{2020 -- 2023}
       {College of Applied Science Koothuparamba, Kannur, India}{}

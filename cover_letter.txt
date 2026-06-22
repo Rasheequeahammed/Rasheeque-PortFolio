@@ -1,24 +1,18 @@
-Subject: Application for Data Analyst Position - Rasheeque Ahammed Rahim
+Subject: Application for AI/ML Engineer Position – Rasheeque Ahammed Rahim
 
 Dear Hiring Manager,
 
-I am writing to express my strong interest in the Data Analyst position at Al Jomaih Energy and Water, as advertised. With a strong background in Computer Science and a passion for turning raw data into actionable insights, I am eager to contribute to your team by supporting data collection, analysis, and reporting initiatives.
+I am writing to apply for the AI/ML Engineer role focused on decision intelligence and optimization. I have an MCA in AI specialization and current hands-on experience building ML solutions at Think Neural AI, where I work on computer vision and spatial AI pipelines.
 
-In my recent experience, I have developed a keen eye for detail and a robust skillset in data management. I have successfully collected, cleaned, and organized large datasets from various sources to ensure accuracy and reliability for business reporting. My proficiency in Microsoft Excel (Advanced), Power BI, and SQL has allowed me to design interactive dashboards and generate comprehensive reports that help stakeholders identify key trends and operational inefficiencies.
+In my role, I translate business needs into model objectives, build evaluation workflows, and move solutions from proof of concept to deployment. This has helped me develop strong Python and PyTorch skills, along with a practical approach to experimentation and problem-solving.
 
-Key highlights of my qualifications include:
+Some of the experience I would bring to this role includes rapid prototyping, offline evaluation, ablation-style comparisons, scenario-based testing, and working closely with engineering teams on deployment and monitoring readiness.
 
-Data Analysis & Reporting: Expertise in preparing detailed weekly and monthly performance reports, ensuring precision and clarity for management review.
+My projects also match this kind of work. In Sakshi.AI, I built real-time analytics pipelines and evaluation harnesses. In SpaceZap.AI, I worked on CV and generative design pipelines with constraint-aware validation. These projects strengthened my interest in ML systems that support better decisions in real-world settings.
 
-Technical Proficiency: Advanced skills in Excel for data manipulation, and Power BI for creating dynamic visualizations that simplify complex data.
+I would be glad to bring this background to your team and contribute to practical, well-tested ML solutions.
 
-Data Integrity: A strong commitment to maintaining database accuracy and ensuring the confidential handling of sensitive information.
-
-Collaboration: Proven ability to work effectively with cross-functional teams to understand data requirements and deliver timely solutions.
-
-I am particularly drawn to Al Jomaih Energy and Water due to its reputation for excellence in the energy and water sectors. I am eager to bring my analytical mindset and dedication to your IT Software department, helping to drive efficiency and informed decision-making.
-
-Thank you for considering my application. I look forward to the opportunity to discuss how my skills and enthusiasm for data analytics can benefit your team.
+Thank you for your time and consideration.
 
 Sincerely,
 
@@ -26,3 +20,4 @@ Rasheeque Ahammed Rahim
 +91 9207252943
 rasheequeraheem78@gmail.com
 https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a
+https://rasheequeahammed.github.io/Rasheeque-PortFolio/

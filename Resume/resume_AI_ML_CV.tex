@@ -30,11 +30,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins - tighter for one page
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.6in}
-\addtolength{\textwidth}{1.2in}
-\addtolength{\topmargin}{-.6in}
-\addtolength{\textheight}{1.2in}
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.65in}
+\addtolength{\textwidth}{1.3in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.5in}
 
 \urlstyle{same}
 
@@ -45,7 +45,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Ensure that PDF is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -54,7 +54,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-1pt}}
   }
 }
 
@@ -63,22 +63,22 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, topsep=2pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-1pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=2pt, topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,30 +88,32 @@
 %----------HEADING - CENTERED----------
 \begin{center}
     \textbf{\Huge \scshape Rasheeque Ahammed Rahim} \\ \vspace{1pt}
-    \small AI \& ML Development Engineer \\ \vspace{3pt}
+    \small AI/ML Engineer $|$ Deep Learning \\ \vspace{3pt}
     \small \href{mailto:rasheequeraheem78@gmail.com}{rasheequeraheem78@gmail.com} $|$ 
     +91 9207252943 $|$ 
     \href{https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a}{LinkedIn} $|$
     \href{https://github.com/Rasheequeahammed}{GitHub} $|$
     \href{https://rasheequeahammed.github.io/Rasheeque-PortFolio/}{Portfolio}
 \end{center}
-\vspace{-5pt}
+\vspace{-3pt}
 
 %-----------SUMMARY-----------
 \section{Professional Summary}
-  \small{Motivated AI/ML Development Engineer with hands-on experience in building scalable machine learning and deep learning solutions. Proficient in Python and frameworks like TensorFlow, PyTorch, and scikit-learn. Demonstrated success in NLP, computer vision, and real-time ML applications. Strong analytical mindset and collaborative approach, eager to contribute to innovative AI-driven products.}
+  \small{Passionate AI/ML Engineer with hands-on experience building and optimizing deep learning systems for real-world, high-performance applications. Proficient in GPU-accelerated model development using PyTorch and TensorFlow (CUDA backends), with a focus on inference optimization, throughput maximization, and deployment on production-grade systems. Experienced in computer vision, NLP, and generative AI — delivering solutions from research and POC through to scalable deployment. Strong analytical mindset with a track record of collaborating with cross-functional teams, performing in-depth performance analysis, and staying at the forefront of cutting-edge deep learning research.}
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{ML/AI:} TensorFlow, PyTorch, scikit-learn, Keras, XGBoost, YOLO, BERT, LLaMA, NLP, Computer Vision, Deep Learning \\
-     \textbf{Programming:} Python (Pandas, NumPy, OpenCV, Transformers), R, SQL \\
-     \textbf{Tools \& Cloud:} Git, Docker, Streamlit, GCP, BigQuery, Docker, Tableau, Power BI, MySQL \\
-     \textbf{Specializations:} Real-time Video Analytics, Spatial AI, Object Detection, Retail Automation, Generative Design \\ \textbf{Certifications:} IBM Gen AI, GCP Foundations, AI/DL (360DigiTMG)
+     \textbf{Deep Learning:} PyTorch, TensorFlow, Keras, YOLO, BERT, LLaMA, DistilBERT, Hugging Face Transformers, scikit-learn \\
+     \textbf{GPU \& Parallel Computing:} CUDA-backed GPU training/inference (PyTorch CUDA, TensorFlow GPU), model optimization, mixed-precision training \\
+     \textbf{AI Domains:} Computer Vision (OpenCV, Pillow), NLP, Generative AI, LLM Fine-tuning, Object Detection, Real-time Inference \\
+     \textbf{Performance \& Profiling:} Model benchmarking, inference latency optimization, throughput analysis, hyperparameter tuning \\
+     \textbf{Programming:} Python (Pandas, NumPy, OpenCV), C++ (fundamentals), SQL; Git, Docker, CI/CD, FastAPI \\
+     \textbf{Certifications:} IBM Gen AI, GCP Foundations, AI/DL (360DigiTMG)
     }}
  \end{itemize}
- \vspace{-8pt}
+ \vspace{-6pt}
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
@@ -121,17 +123,17 @@
       {AI ML Development Engineer}{May 2025 -- Present}
       {Think Neural AI}{Remote}
       \resumeItemListStart
-        \resumeItem{Develop and deploy ML pipelines for real-time video analytics and spatial AI serving major retail clients (Lenskart, MR.DIY), achieving 96\%+ accuracy in object detection and processing 1000+ hours of video data monthly.}
-        \resumeItem{Engineer YOLO-based computer vision models for automated object detection, behavioral analysis, boundary detection, and anomaly recognition in retail environments.}
-        \resumeItem{Build scalable generative design algorithms to automate CAD layout generation from 3D scan data, reducing design time by 80\% and improving store rollout efficiency.}
+        \resumeItem{Design and optimize GPU-accelerated deep learning pipelines for real-time computer vision and spatial AI applications; achieve 96\%+ inference accuracy while processing 1000+ hours of video data monthly on production systems serving enterprise retail clients.}
+        \resumeItem{Perform in-depth model analysis and optimization — including architecture selection, mixed-precision inference, and throughput benchmarking — to maximize performance of YOLO-based vision models on GPU hardware.}
+        \resumeItem{Research and implement cutting-edge deep learning techniques for generative design and real-time analytics; collaborate directly with clients to understand their AI requirements and deliver tailored GPU-optimized solutions.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Data Scientist Intern}{March 2024 -- October 2024}
       {Innodatatics}{Bangalore, India}
       \resumeItemListStart
-        \resumeItem{Built and optimized ML models using TensorFlow/scikit-learn, improving accuracy by 15\% through hyperparameter tuning, feature engineering, and cross-validation on datasets with 100K+ records.}
-        \resumeItem{Deployed AI solutions reducing operational costs by \$1M+, including YOLO-based inventory counting (96\% accuracy); collaborated on NLP (DistilBERT) and CV projects for retail/healthcare.}
+        \resumeItem{Built and optimized deep learning models using TensorFlow/PyTorch with GPU acceleration on GCP; improved model accuracy by 15\% through systematic hyperparameter search, feature engineering, and cross-validation on 100K+ record datasets.}
+        \resumeItem{Delivered AI solutions reducing operational costs by \$1M+; performed model performance profiling and latency analysis for production inference systems; contributed to NLP (DistilBERT) research POCs and computer vision pipelines.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -142,23 +144,22 @@
     \resumeSubHeadingListStart
     
       \resumeProjectHeading
-          {\textbf{SpaceZap.AI - AI-Driven Retail Site Survey \& Design Automation}}{May 2025 -- Present}
+          {\textbf{Sakshi.AI - GPU-Accelerated Real-Time Video Analytics Platform}}{May 2025 -- Present}
           \resumeItemListStart
-            \resumeItem{Engineered end-to-end ML pipelines to automate retail site surveys and 3D fit-out designs using computer vision models for boundary detection and spatial analysis across 50+ retail locations.}
-            \resumeItem{Automated LiDAR/3D scan conversion to CAD-ready layouts with generative design logic. \textit{Tech: PyTorch, OpenCV, CAD Automation, LiDAR}}
+            \resumeItem{Engineered GPU-accelerated deep learning pipelines for real-time surveillance analytics monitoring 100+ concurrent camera feeds; optimized YOLO model inference for maximum throughput with minimal latency on production hardware.}
+            \resumeItem{Performed systematic benchmarking and architecture tuning of vision models for object detection, behavioral analysis, and anomaly recognition. \textit{Tech: PyTorch, YOLO, TensorFlow GPU, OpenCV, CUDA backend}}
           \resumeItemListEnd
-          
+
       \resumeProjectHeading
-          {\textbf{Sakshi.AI - Real-Time Video Analytics \& Surveillance Platform}}{May 2025 -- Present}
+          {\textbf{Emotion-Aware Chatbot (LLM Fine-tuning \& Deep Learning)}}{November 2024 -- January 2025}
           \resumeItemListStart
-            \resumeItem{Developed real-time video analytics platform for retail/industrial surveillance monitoring 100+ camera feeds with vision models for object detection, behavioral analysis, and anomaly recognition.}
-            \resumeItem{Implemented scalable video processing workflows providing actionable insights and alerts. \textit{Tech: TensorFlow, YOLO, OpenCV, Stream Processing}}
+            \resumeItem{Fine-tuned LLaMA and DistilBERT transformer models on the GoEmotions dataset (28 classes); conducted in-depth analysis of model architecture, attention mechanisms, and GPU memory utilization to achieve 92\% accuracy at optimal inference speed. \textit{Tech: PyTorch, Transformers, CUDA, Hugging Face}}
           \resumeItemListEnd
-          
+
       \resumeProjectHeading
-          {\textbf{Emotion Detection \& Adaptive Response Chatbot}}{November 2024 -- January 2025}
+          {\textbf{SpaceZap.AI - Computer Vision \& Generative Design Pipelines}}{May 2025 -- Present}
           \resumeItemListStart
-            \resumeItem{Built emotion-aware chatbot using DistilBERT \& LLaMA on GoEmotions dataset (28 emotions), achieving 92\% accuracy; deployed on Hugging Face with Streamlit UI handling 500+ interactions. \textit{Tech: Transformers, NLP, Fine-tuning}}
+            \resumeItem{Developed GPU-accelerated CV models for boundary detection and spatial analysis; implemented generative design algorithms converting 3D scan data into CAD layouts, reducing design time by 80\% across 50+ retail locations. \textit{Tech: PyTorch, OpenCV, GPU inference}}
           \resumeItemListEnd
           
     \resumeSubHeadingListEnd
