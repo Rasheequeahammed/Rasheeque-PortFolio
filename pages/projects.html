@@ -1,99 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/projects.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="../assets/images/misc/favicon1.png" type="image/x-png">
-    <title>Projects | Portfolio Rasheeque</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link id="favicon" rel="shortcut icon" href="../assets/images/misc/favicon1.png" type="image/x-png">
+  <title>All Projects | Rasheeque</title>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 </head>
-<body oncontextmenu="return false">
+<body>
 
-<!-- navbar starts -->
-<header>
-        <a href="../index.html" class="logo"><i class="fab fa-node-js"></i> Rasheeque</a>
+  <!-- 3D Background -->
+  <canvas id="bg-canvas"></canvas>
 
-        <div id="menu" class="fas fa-bars"></div>
-        <nav class="navbar">
-            <ul>
-            <li><a href="../index.html#home">Home</a></li>
-            <li><a href="../index.html#about">About</a></li>
-            <li><a href="../index.html#skills">Skills</a></li>
-            <li><a href="../index.html#education">Education</a></li>
-            <li><a class="active" href="../index.html#work">Work</a></li>
-            <li><a href="../index.html#experience">Experience</a></li>
-            <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-</header>
-<!-- navbar ends -->
+  <!-- Navbar -->
+  <header>
+    <a href="../index.html" class="logo"><i class="fas fa-atom"></i> Rasheeque</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar" id="navMenu">
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a class="active" href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- work project section starts -->
-<section class="work" id="work">
-
-  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-  
-  <div id="filters" class="button-group">
-    <button class="btn is-checked" data-filter="*">All Projects</button>
-    <button class="btn" data-filter=".mern">Solar Power</button>
-    <button class="btn" data-filter=".lamp">Vials And Syringes</button>
-    <button class="btn" data-filter=".basicweb">Fruits And Veg</button>
-  </div>
-
-  <div class="box-container">
-
-    <!-- <div class="box tilt">
-      <img src="/assets/images/projects/agecalc.PNG" alt="" />
-      <div class="content">
-        <div class="tag">
-        <h3>Portfolio Website</h3>
-        </div>
-        <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
-        </div>
+  <!-- Projects Section -->
+  <section id="projects" style="padding-top: 12rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">All Work</span>
+        <h2 class="section-title">My <span class="gradient">Projects</span></h2>
+        <p class="section-subtitle">A complete showcase of my work in AI, ML, and data science.</p>
       </div>
-    </div> -->   
 
-  </div>
+      <!-- Filter Buttons -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="machine_learning">Machine Learning</button>
+        <button class="filter-btn" data-filter="full_stack">Full Stack</button>
+        <button class="filter-btn" data-filter="image_processing">Computer Vision</button>
+      </div>
 
-  <div class="backbtn">
-    <a href="../index.html#work" class="btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
-  </a>
-  </div>
+      <div class="projects-grid" id="allProjectsGrid">
+        <!-- Projects loaded via JS -->
+      </div>
 
-</section>
-<!-- work project section ends -->
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="../index.html#projects" class="btn btn-outline">
+          <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
 
-<!-- scroll top btn -->
-<a href="#work" class="fas fa-angle-up" id="scroll-top"></a>
-<!-- scroll back to top -->
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>Designed with <i class="fas fa-heart" style="color: var(--accent-warm);"></i> by Rasheeque</p>
+        <p>&copy; <span id="currentYear"></span> Rasheeque Ahammed Rahim. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
+  <!-- Scroll to Top -->
+  <a href="#projects" class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></a>
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-<!-- jquery cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Scripts -->
+  <script src="../assets/js/data-projects.js"></script>
+  <script src="../assets/js/three-bg.js"></script>
 
-<!-- vanilla tilt.js links -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    // Dynamic year
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-<!-- scroll reveal anim -->
-<script src="https://unpkg.com/scrollreveal"></script>
+    // Mobile nav
+    const menuBtn = document.getElementById('menu');
+    const navMenu = document.getElementById('navMenu');
+    if (menuBtn && navMenu) {
+      menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('fa-bars');
+        menuBtn.classList.toggle('fa-xmark');
+        navMenu.classList.toggle('nav-toggle');
+      });
+    }
 
-<!-- isotope filter plugin cdn -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    // Scroll to top
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      if (scrollTopBtn) {
+        scrollTopBtn.classList.toggle('active', window.scrollY > 300);
+      }
+    });
 
-<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+    // Category labels
+    const categoryLabels = {
+      'machine_learning': 'Machine Learning',
+      'full_stack': 'Full Stack',
+      'image_processing': 'Computer Vision',
+      'data_science': 'Data Science'
+    };
 
-<script src="../assets/js/projects.js"></script>
+    // Render all projects
+    function renderProjects(filter = 'all') {
+      const container = document.getElementById('allProjectsGrid');
+      if (!container || typeof projectsData === 'undefined') return;
+
+      const filtered = filter === 'all'
+        ? projectsData
+        : projectsData.filter(p => p.category === filter);
+
+      let html = '';
+      filtered.forEach(project => {
+        const categoryLabel = categoryLabels[project.category] || project.category;
+        html += `
+          <div class="project-card" data-category="${project.category}">
+            <div class="project-image">
+              <img src="../assets/images/projects/${project.image}" alt="${project.name}" loading="lazy" decoding="async" />
+              <div class="project-overlay">
+                <a href="${project.links.view}" class="btn btn-small btn-primary" target="_blank"><i class="fas fa-eye"></i> View</a>
+                <a href="${project.links.code}" class="btn btn-small btn-outline" target="_blank"><i class="fas fa-code"></i> Code</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">${categoryLabel}</span>
+              <h3>${project.name}</h3>
+              <p>${project.desc}</p>
+            </div>
+          </div>`;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProjects(btn.dataset.filter);
+      });
+    });
+
+    // Initial render
+    renderProjects();
+  </script>
 
 </body>
 </html>

@@ -5,301 +5,463 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords"
-    content="Rasheeque Ahammed Rahim, portfolio, Data Scientist, AI Engineer, 3D Portfolio, Machine Learning" />
-  <meta name="description"
-    content="Rasheeque's 'Quantum' Portfolio - Data Scientist & AI Engineer. Interactive 3D Experience." />
 
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <!-- SEO Meta -->
+  <meta name="keywords"
+    content="Rasheeque Ahammed Rahim, AI Engineer, Data Scientist, Machine Learning, Deep Learning, Portfolio" />
+  <meta name="description"
+    content="Rasheeque Ahammed Rahim — AI/ML Development Engineer building intelligent systems with Python, TensorFlow, PyTorch. Explore projects, experience, and skills." />
+  <meta name="author" content="Rasheeque Ahammed Rahim" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rasheeque Ahammed Rahim | AI & Data Scientist" />
+  <meta property="og:description" content="AI/ML Development Engineer building intelligent systems. Explore my portfolio of machine learning projects and experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rasheequeahammed.github.io/Rasheeque-PortFolio/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rasheeque Ahammed Rahim | AI & Data Scientist" />
+  <meta name="twitter:description" content="AI/ML Development Engineer building intelligent systems." />
+
+  <!-- Google Fonts: Space Grotesk + Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Favicon -->
-  <link id='favicon' rel="shortcut icon" href="./assets/images/misc/favicon1.png" type="image/x-png">
+  <link id="favicon" rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
 
-  <title>Rasheeque | AI & Data Scientist</title>
+  <title>Rasheeque Ahammed Rahim | AI & Data Scientist</title>
 
-  <!-- Three.js (CDN) -->
+  <!-- Three.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <!-- Vanta.js or Custom Script will go here -->
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
-<body oncontextmenu="return false">
+<body>
 
-  <!-- 3D Background Canvas -->
-  <canvas id="bg-canvas"></canvas>
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- pre loader -->
-  <!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">RA</div>
+    <div class="preloader-bar"></div>
+  </div>
 
-  <!-- 3D Background Canvas -->
-  <canvas id="bg-canvas"></canvas>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Background Canvas Removed for Minimalist Theme -->
+
+  <!-- Social Sidebar (Left) -->
+  <div class="socials-sidebar" id="socialsSidebar">
+    <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/Rasheequeahammed" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://t.me/Rasheequeahammed" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+    <a href="mailto:rasheequeraheem78@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <!-- Email Sidebar (Right) -->
+  <div class="email-sidebar" id="emailSidebar">
+    <a href="mailto:rasheequeraheem78@gmail.com">rasheequeraheem78@gmail.com</a>
+  </div>
 
   <!-- Navbar -->
-  <header>
-    <a href="/" class="logo"><i class="fab fa-connectdevelop"></i> Rasheeque</a>
+  <header id="navbar">
+    <a href="/" class="logo"><i class="fas fa-atom"></i> Rasheeque</a>
     <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
+    <nav class="navbar" id="navMenu">
       <ul>
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- ═══════ Hero Section ═══════ -->
   <section class="hero" id="home">
     <div class="container">
-      <div class="content">
-        <h2>Hello,<br>I'm <span class="text-gradient">Rasheeque</span></h2>
-        <h3 style="font-size: 2.5rem; margin-bottom: 2rem;">I am a <span class="typing-text"
-            style="color:var(--secondary);"></span></h3>
-        <p>Data Scientist & AI Engineer building intelligent systems.</p>
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank"><i
-              class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/Rasheequeahammed" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:rasheequeraheem78@gmail.com"><i class="fas fa-envelope"></i></a>
-          <a href="https://t.me/Rasheequeahammed" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Available for opportunities
         </div>
-        <br>
-        <a href="#about" class="btn">View My Work <i class="fas fa-arrow-down"></i></a>
+        <h1>Hi, I'm<br><span class="text-gradient">Rasheeque</span></h1>
+        <div class="role">I'm a <span class="typing-text"></span></div>
+        <p>AI/ML Development Engineer building intelligent systems that transform data into actionable insights and automated solutions.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a href="./assets/resume/Rasheeque.pdf"
+            target="_blank" class="btn btn-outline">Resume <i class="fas fa-download"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-shape">
+          <div class="hero-shape-inner">
+            <img src="./assets/images/profile/profile-hero.png" alt="Rasheeque Ahammed Rahim" loading="eager">
+          </div>
+        </div>
       </div>
     </div>
-    <!-- 3D Background Interaction Area is the whole screen -->
   </section>
 
-  <!-- About Section -->
+  <!-- ═══════ About Section ═══════ -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="glass-card about-content">
-        <div class="about-img">
-          <!-- Using existing image path -->
-          <img src="./assets/images/profile/profile2.jpg" alt="Rasheeque" style="width:100%; height:auto;">
+      <div class="section-header">
+        <span class="section-label">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal-left">
+          <img src="./assets/images/profile/profile2.jpg" alt="Rasheeque Ahammed Rahim" loading="lazy" decoding="async">
         </div>
-        <div class="about-text">
-          <h3>I'm an AI Enthusiast from Kerala, India.</h3>
-          <p style="margin: 1.5rem 0; color: var(--text-muted);">
-            Motivated AI/ML Development Engineer with hands-on experience in building scalable machine learning and deep
-            learning solutions. Proficient in Python, TensorFlow, PyTorch, and NLP.
-          </p>
-          <div class="grid-container" style="margin-bottom: 2rem;">
-            <div>
-              <strong>Email:</strong> rasheequeraheem78@gmail.com
+        <div class="about-text reveal-right">
+          <h3>AI Enthusiast from Kerala, India</h3>
+          <p>Motivated AI/ML Development Engineer with hands-on experience in building scalable machine learning and deep
+            learning solutions. Proficient in Python, TensorFlow, PyTorch, and NLP. Passionate about transforming complex data into intelligent, real-world applications.</p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-count="6">0</span>
+              <span class="stat-label">Projects</span>
             </div>
-            <div>
-              <strong>Location:</strong> Kerala, India
+            <div class="stat-item">
+              <span class="stat-number" data-count="4">0</span>
+              <span class="stat-label">Experiences</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="17">0</span>
+              <span class="stat-label">Certificates</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="3">0</span>
+              <span class="stat-label">Degrees</span>
             </div>
           </div>
-          <a href="https://drive.google.com/file/d/1fIS4qgvd2s7hiZ1prhsJMhGLaLPoE50k/view?usp=drive_link"
-            target="_blank" class="btn">Download Resume <i class="fas fa-download"></i></a>
+
+          <div class="about-details">
+            <div class="about-detail-item">
+              <strong><i class="fas fa-envelope"></i> Email</strong>
+              <span>rasheequeraheem78@gmail.com</span>
+            </div>
+            <div class="about-detail-item">
+              <strong><i class="fas fa-map-marker-alt"></i> Location</strong>
+              <span>Kerala, India</span>
+            </div>
+          </div>
+
+          <a href="./assets/resume/Rasheeque.pdf"
+            target="_blank" class="btn btn-primary">Download Resume <i class="fas fa-download"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
+  <!-- ═══════ What I Do Section ═══════ -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Specializations</span>
+        <h2 class="section-title">What I <span class="gradient">Do</span></h2>
+        <p class="section-subtitle">Leveraging AI and data science to solve real-world problems across industries.</p>
+      </div>
+      <div class="services-grid">
+        <div class="glass-card service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3>Machine Learning</h3>
+          <p>Building predictive models, classification systems, and recommendation engines using scikit-learn, TensorFlow, and PyTorch.</p>
+        </div>
+        <div class="glass-card service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-eye"></i></div>
+          <h3>Computer Vision</h3>
+          <p>Developing object detection, image segmentation, and visual analytics systems using YOLO, OpenCV, and deep learning architectures.</p>
+        </div>
+        <div class="glass-card service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Data Analytics</h3>
+          <p>Transforming raw data into actionable insights through statistical analysis, visualization, and business intelligence dashboards.</p>
+        </div>
+        <div class="glass-card service-card reveal-up">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>NLP & Gen AI</h3>
+          <p>Creating intelligent text processing, sentiment analysis, and conversational AI systems powered by transformer models.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ Skills Section ═══════ -->
   <section id="skills">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div id="skillsContainer" class="grid-container">
-        <!-- Skills will be loaded by data-skills.js, but we need to ensure their styles work -->
-        <!-- Just a placeholder for now to see layout -->
-        <div class="glass-card" style="text-align:center;">
-          <i class="fab fa-python" style="font-size: 3rem; color: var(--secondary);"></i>
-          <h3 style="margin-top: 1rem;">Python</h3>
-        </div>
+      <div class="section-header">
+        <span class="section-label">Technologies</span>
+        <h2 class="section-title">Skills & <span class="gradient">Tools</span></h2>
+        <p class="section-subtitle">The technologies and tools I use to bring ideas to life.</p>
+      </div>
+      <div id="skillsContainer">
+        <!-- Skills loaded by data-skills.js -->
       </div>
     </div>
   </section>
 
-  <!-- Education Section -->
+  <!-- ═══════ Education Section ═══════ -->
   <section id="education">
     <div class="container">
-      <h2 class="section-title">Education</h2>
-      <div class="glass-card" style="display:flex; flex-direction:column; gap:2rem;">
-
-        <div style="display:flex; gap:2rem; align-items:center;">
-          <img src="./assets/images/education/pg.jpeg" alt="Amrita"
-            style="width:80px; height:80px; border-radius:10px; object-fit:cover;">
-          <div>
-            <h3 style="color:var(--primary);">Master of Computer Application (MCA) in AI</h3>
-            <p style="color:var(--text-muted);">Amrita Ahead | Amrita University</p>
-            <p><strong>2023-2025 | Grade 'A'</strong></p>
+      <div class="section-header">
+        <span class="section-label">Academic Background</span>
+        <h2 class="section-title">My <span class="gradient">Education</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 — 2025</div>
+          <div class="glass-card timeline-card">
+            <img src="./assets/images/education/pg.jpeg" alt="Amrita University" class="edu-logo" loading="lazy" decoding="async">
+            <h3>Master of Computer Application (MCA) in AI</h3>
+            <span class="institution">Amrita Ahead | Amrita University</span>
+            <div class="grade"><i class="fas fa-award"></i> Grade 'A'</div>
           </div>
         </div>
-
-        <hr style="border-color:var(--glass-border);">
-
-        <div style="display:flex; gap:2rem; align-items:center;">
-          <img src="./assets/images/education/SUNY_.jpg" alt="SUNY"
-            style="width:80px; height:80px; border-radius:10px; object-fit:cover;">
-          <div>
-            <h3 style="color:var(--primary);">Postgraduate Diploma in AI</h3>
-            <p style="color:var(--text-muted);">SUNY Potsdam, USA</p>
-            <p><strong>2024 | Grade 'A'</strong></p>
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024</div>
+          <div class="glass-card timeline-card">
+            <img src="./assets/images/education/SUNY_.jpg" alt="SUNY Potsdam" class="edu-logo" loading="lazy" decoding="async">
+            <h3>Postgraduate Diploma in AI</h3>
+            <span class="institution">SUNY Potsdam, USA</span>
+            <div class="grade"><i class="fas fa-award"></i> Grade 'A'</div>
           </div>
         </div>
-
-        <hr style="border-color:var(--glass-border);">
-
-        <div style="display:flex; gap:2rem; align-items:center;">
-          <img src="./assets/images/education/college.jpeg" alt="College"
-            style="width:80px; height:80px; border-radius:10px; object-fit:cover;">
-          <div>
-            <h3 style="color:var(--primary);">BSc Computer Science</h3>
-            <p style="color:var(--text-muted);">Kannur University</p>
-            <p><strong>2020-2023 | Grade 'A'</strong></p>
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 — 2023</div>
+          <div class="glass-card timeline-card">
+            <img src="./assets/images/education/college.jpeg" alt="Kannur University" class="edu-logo" loading="lazy" decoding="async">
+            <h3>BSc Computer Science</h3>
+            <span class="institution">Kannur University</span>
+            <div class="grade"><i class="fas fa-award"></i> Grade 'A'</div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
+  <!-- ═══════ Experience Section ═══════ -->
   <section id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="grid-container">
-
-        <div class="glass-card">
-          <span style="color:var(--secondary); font-size:1.4rem;">May 2025 - Present</span>
-          <h3 style="margin: 1rem 0;">AI ML Development Engineer</h3>
-          <p style="color:var(--text-muted);">Think Neural AI</p>
+      <div class="section-header">
+        <span class="section-label">Career Journey</span>
+        <h2 class="section-title">Work <span class="gradient">Experience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item current reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May 2025 — Present</div>
+          <div class="glass-card timeline-card">
+            <span class="current-badge"><i class="fas fa-circle"></i> Current</span>
+            <h3>AI ML Development Engineer</h3>
+            <span class="company">Think Neural AI</span>
+            <p>Building scalable ML pipelines for real-time intelligent video analytics and spatial AI platforms. Engineering vision models for automated object detection, behavioral analysis, and generative design systems.</p>
+          </div>
         </div>
-
-        <div class="glass-card">
-          <span style="color:var(--secondary); font-size:1.4rem;">May 2024 - June 2024</span>
-          <h3 style="margin: 1rem 0;">Data Scientist Intern</h3>
-          <p style="color:var(--text-muted);">Aispry</p>
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">May 2024 — June 2024</div>
+          <div class="glass-card timeline-card">
+            <h3>Data Scientist Intern</h3>
+            <span class="company">Aispry</span>
+            <p>Applied machine learning techniques to develop data-driven solutions, performing exploratory data analysis and building predictive models.</p>
+          </div>
         </div>
-
-        <div class="glass-card">
-          <span style="color:var(--secondary); font-size:1.4rem;">Mar 2024 - Apr 2024</span>
-          <h3 style="margin: 1rem 0;">Data Scientist Intern</h3>
-          <p style="color:var(--text-muted);">Innodatatics</p>
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Mar 2024 — Apr 2024</div>
+          <div class="glass-card timeline-card">
+            <h3>Data Scientist Intern</h3>
+            <span class="company">Innodatatics</span>
+            <p>Worked on data preprocessing, feature engineering, and model deployment for business analytics applications.</p>
+          </div>
         </div>
-
-        <div class="glass-card">
-          <span style="color:var(--secondary); font-size:1.4rem;">Nov 2022 - Apr 2023</span>
-          <h3 style="margin: 1rem 0;">Software Developer Intern</h3>
-          <p style="color:var(--text-muted);">RISS Technologies</p>
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Nov 2022 — Apr 2023</div>
+          <div class="glass-card timeline-card">
+            <h3>Software Developer Intern</h3>
+            <span class="company">RISS Technologies</span>
+            <p>Developed software solutions and gained experience in full-stack development, database management, and agile methodologies.</p>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Projects Section (renamed from 'work') -->
+  <!-- ═══════ Projects Section ═══════ -->
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="box-container grid-container">
+      <div class="section-header">
+        <span class="section-label">Featured Work</span>
+        <h2 class="section-title">My <span class="gradient">Projects</span></h2>
+        <p class="section-subtitle">A showcase of my work in AI, machine learning, and data science.</p>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
         <!-- Projects loaded via JS -->
       </div>
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="./pages/projects.html" class="btn">View All Projects</a>
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="./pages/projects.html" class="btn btn-outline">View All Projects <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- Certificates Section -->
+  <!-- ═══════ Certificates Section ═══════ -->
   <section id="certificates">
     <div class="container">
-      <h2 class="section-title">Certificates</h2>
-      <div class="carousel-container">
+      <div class="section-header">
+        <span class="section-label">Credentials</span>
+        <h2 class="section-title">Certifications & <span class="gradient">Courses</span></h2>
+        <p class="section-subtitle">Continuous learning through industry-recognized certifications.</p>
+      </div>
+      <div class="carousel-container" id="certificatesCarousel">
         <!-- Certificates loaded via JS -->
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- ═══════ Contact Section ═══════ -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-      <div class="glass-card" style="max-width: 600px; margin: 0 auto;">
-        <form id="contact-form">
-          <div style="display:flex; flex-direction:column; gap:1.5rem;">
-            <input type="text" name="name" placeholder="Name" class="glass-card"
-              style="width:100%; border:1px solid var(--glass-border); background:rgba(255,255,255,0.05); color:var(--text-main); padding:1rem;">
-            <input type="email" name="email" placeholder="Email" class="glass-card"
-              style="width:100%; border:1px solid var(--glass-border); background:rgba(255,255,255,0.05); color:var(--text-main); padding:1rem;">
-            <textarea name="message" placeholder="Message" cols="30" rows="5" class="glass-card"
-              style="width:100%; border:1px solid var(--glass-border); background:rgba(255,255,255,0.05); color:var(--text-main); padding:1rem;"></textarea>
-            <button type="submit" class="btn" style="width:100%;">Send Message <i
-                class="fas fa-paper-plane"></i></button>
+      <div class="section-header">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Let's <span class="gradient">Connect</span></h2>
+        <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div>
+            <h3>Let's work together</h3>
+            <p>I'm always interested in hearing about new projects, creative ideas, or opportunities to be part of your vision.</p>
           </div>
-        </form>
-        <div style="margin-top:2rem; text-align:center;">
-          <p>Email: <a href="mailto:rasheequeraheem78@gmail.com"
-              style="color:var(--primary);">rasheequeraheem78@gmail.com</a></p>
-          <div class="socials" style="justify-content:center; margin-top:1rem;">
-            <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/Rasheequeahammed" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://t.me/Rasheequeahammed" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+          <div class="contact-links">
+            <a href="mailto:rasheequeraheem78@gmail.com" class="contact-link-item">
+              <i class="fas fa-envelope"></i>
+              <span>rasheequeraheem78@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank" class="contact-link-item">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/Rasheequeahammed" target="_blank" class="contact-link-item">
+              <i class="fab fa-github"></i>
+              <span>GitHub Profile</span>
+            </a>
+          </div>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/Rasheequeahammed" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/Rasheequeahammed" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="mailto:rasheequeraheem78@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
+        <form id="contact-form" class="contact-form reveal-right">
+          <div class="form-group">
+            <input type="text" name="name" id="contact-name" placeholder=" " required>
+            <label for="contact-name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="contact-email" placeholder=" " required>
+            <label for="contact-email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="contact-message" rows="5" placeholder=" " required></textarea>
+            <label for="contact-message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ═══════ Footer ═══════ -->
   <footer>
-    <p>Designed with <i class="fas fa-heart" style="color:var(--accent);"></i> by Rasheeque</p>
-    <p>&copy; 2025 All Rights Reserved.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><i class="fas fa-atom"></i> Rasheeque</a>
+          <p>AI/ML Development Engineer passionate about building intelligent systems that make a real-world impact.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </div>
+        <div class="footer-col">
+          <h4>Sections</h4>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.linkedin.com/in/rasheeque-ahammed-raheem-aa777325a" target="_blank">LinkedIn</a>
+          <a href="https://github.com/Rasheequeahammed" target="_blank">GitHub</a>
+          <a href="https://t.me/Rasheequeahammed" target="_blank">Telegram</a>
+          <a href="mailto:rasheequeraheem78@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed with <i class="fas fa-heart" style="color: var(--accent-warm);"></i> by Rasheeque</p>
+        <p>&copy; <span id="currentYear"></span> Rasheeque Ahammed Rahim. All Rights Reserved.</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Scroll to Top -->
+  <a href="#home" class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></a>
 
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
-  <!-- jquery cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ═══════ Scripts ═══════ -->
 
-  <!-- typed.js cdn -->
+  <!-- Typed.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"
     integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- particle.js links -->
-  <script src="./assets/js/particles.min.js"></script>
-  <script src="./assets/js/app.js"></script>
-
-  <!-- vanilla tilt.js links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
-    integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <!-- scroll reveal anim -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
+  <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
-
+  <!-- Data Files -->
   <script src="./assets/js/data-skills.js"></script>
   <script src="./assets/js/data-projects.js"></script>
   <script src="./assets/js/data-certificates.js"></script>
+
+  <!-- Core Scripts -->
   <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/three-bg.js"></script>
+  <!-- Removed three-bg.js for minimalist theme -->
+  <script src="./assets/js/cursor.js"></script>
+  <script src="./assets/js/gsap-animations.js"></script>
 
 </body>
 
