@@ -122,7 +122,7 @@
       <div class="hero-visual">
         <div class="hero-shape">
           <div class="hero-shape-inner">
-            <img src="./assets/images/profile/profile-hero.png" alt="Rasheeque Ahammed Rahim" loading="eager">
+            <img src="./assets/images/profile/Main%20profile.png" alt="Rasheeque Ahammed Rahim" loading="eager">
           </div>
         </div>
       </div>
@@ -138,7 +138,33 @@
       </div>
       <div class="about-grid">
         <div class="about-image reveal-left">
-          <img src="./assets/images/profile/profile2.jpg" alt="Rasheeque Ahammed Rahim" loading="lazy" decoding="async">
+          <div class="terminal-window">
+            <div class="terminal-header">
+              <span class="btn-red"></span>
+              <span class="btn-yellow"></span>
+              <span class="btn-green"></span>
+              <span class="terminal-title">neural_engine.py</span>
+            </div>
+            <div class="terminal-body">
+              <pre><code><span class="keyword">import</span> torch
+<span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn
+
+<span class="keyword">class</span> <span class="class-name">Mind</span>(nn.Module):
+    <span class="keyword">def</span> <span class="function">__init__</span>(self):
+        <span class="builtin">super</span>().__init__()
+        self.learn = nn.Sequential(
+            nn.Linear(<span class="number">2023</span>, <span class="number">2025</span>),
+            nn.ReLU(),
+            nn.Linear(<span class="number">2025</span>, <span class="number">100</span>)
+        )
+        
+    <span class="keyword">def</span> <span class="function">forward</span>(self, data):
+        <span class="keyword">return</span> <span class="string">"Insight"</span>
+
+model = Mind()
+<span class="builtin">print</span>(<span class="string">"AI Engineer Initialized..."</span>)</code></pre>
+            </div>
+          </div>
         </div>
         <div class="about-text reveal-right">
           <h3>AI Enthusiast from Kerala, India</h3>
@@ -158,7 +184,7 @@
             </div>
             <div class="stat-item">
               <span class="stat-number" data-count="15">0</span>
-              <span class="stat-label">Certificates</span>
+              <span class="stat-label">Certifications</span>
             </div>
             <div class="stat-item">
               <span class="stat-number" data-count="2">0</span>
@@ -202,8 +228,8 @@
         <div class="glass-card service-card reveal-up">
           <div class="service-icon"><i class="fas fa-eye"></i></div>
           <h3>Computer Vision</h3>
-          <p>Developing object detection, image segmentation, and visual analytics systems using YOLO, OpenCV, and deep
-            learning architectures.</p>
+          <p>Developing object detection, image segmentation, and visual analytics systems using YOLO, OpenCV, Nvidia
+            deep stream and deep learning architectures.</p>
         </div>
         <div class="glass-card service-card reveal-up">
           <div class="service-icon"><i class="fas fa-chart-line"></i></div>

@@ -583,7 +583,7 @@ header nav ul li a.active {
 /* Premium Hero Image Frame */
 .hero-shape {
   width: 380px;
-  height: 480px;
+  height: 380px;
   position: relative;
   border-radius: var(--radius-lg);
   z-index: 1;
@@ -731,12 +731,65 @@ section {
   position: relative;
 }
 
-.about-image img {
+.terminal-window {
   width: 100%;
+  background: var(--accent-primary);
   border: 2px solid var(--text-primary);
   box-shadow: 12px 12px 0px var(--text-primary);
-  display: block;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+  text-align: left;
 }
+
+.terminal-header {
+  background: var(--bg-deep);
+  border-bottom: 2px solid var(--text-primary);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.terminal-header span[class^="btn-"] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+}
+
+.btn-red { background: #ff5f56; }
+.btn-yellow { background: #ffbd2e; }
+.btn-green { background: #27c93f; }
+
+.terminal-title {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+.terminal-body {
+  padding: 2.5rem;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.terminal-body pre {
+  margin: 0;
+}
+
+.terminal-body .keyword { color: #ff79c6; }
+.terminal-body .class-name { color: #50fa7b; }
+.terminal-body .function { color: #50fa7b; }
+.terminal-body .builtin { color: #8be9fd; }
+.terminal-body .number { color: #bd93f9; }
+.terminal-body .string { color: #f1fa8c; }
+.terminal-body .comment { color: #6272a4; }
 
 .about-text h3 {
   font-family: var(--font-heading);
@@ -1686,24 +1739,11 @@ footer::before {
 }
 
 /* ── GSAP Animation Helpers ── */
-.reveal-up {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-40px);
-}
-
-.reveal-right {
-  opacity: 0;
-  transform: translateX(40px);
-}
-
+.reveal-up,
+.reveal-left,
+.reveal-right,
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.9);
 }
 
 /* ── Responsive Design ── */
@@ -1923,7 +1963,7 @@ footer::before {
   }
 
   .about-text p {
-    text-align: left;
+    text-align: center;
     width: 100%;
   }
 
@@ -1932,7 +1972,8 @@ footer::before {
     gap: 2.5rem;
     margin-top: 3rem;
     width: 100%;
-    padding-right: 6px; /* Space for the brutalist box shadow to not overflow screen */
+    padding-right: 10px;
+    padding-left: 2px;
   }
   
   .contact-grid {
